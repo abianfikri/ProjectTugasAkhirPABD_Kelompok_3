@@ -32,8 +32,8 @@ namespace Toko_Obat
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
 
-                comboBox1.DisplayMember = "Id_Apoteker";
-                comboBox1.DataSource = dt;
+                id_apoteker.DisplayMember = "Id_Apoteker";
+                id_apoteker.DataSource = dt;
                 conn.Close();
             }
             catch(Exception e)
@@ -55,8 +55,8 @@ namespace Toko_Obat
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
 
-                comboBox2.DisplayMember = "Kode_Obat";
-                comboBox2.DataSource = dt;
+                kode_obat.DisplayMember = "Kode_Obat";
+                kode_obat.DataSource = dt;
                 conn.Close();
             }
             catch (Exception e)
@@ -71,6 +71,10 @@ namespace Toko_Obat
         {
             // TODO: This line of code loads data into the 'toko_ObatDataSet.Data_Pengelolaan_Obat' table. You can move, or remove it, as needed.
             this.data_Pengelolaan_ObatTableAdapter.Fill(this.toko_ObatDataSet.Data_Pengelolaan_Obat);
+
+            nama_obat.Enabled = false;
+            harga.Enabled = false;
+            jenis_obat.Enabled = false;
 
         }
 
@@ -120,18 +124,24 @@ namespace Toko_Obat
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
             SqlConnection conn = new SqlConnection("Data Source=LAPTOP-91VJ4BQG;Initial Catalog=Toko_Obat;User ID=sa;Password=abianfikri");
-            SqlCommand query = new SqlCommand("Select * From Obat where Kode_Obat = '"+comboBox2.SelectedItem.ToString()+"'", conn);
-            conn.Open();
-            query.ExecuteNonQuery();
-            SqlDataAdapter sda = new SqlDataAdapter(query);
-            DataTable dt = new DataTable();
+            SqlCommand query = new SqlCommand("Select * From Obat", conn);
+            SqlDataReader sdr;
 
-            sda.Fill(dt);
-            foreach(DataRow dr in dt.Rows)
+            try
             {
-                textBox6.Text = dr["Kode_Obat"].ToString();
+                conn.Open();
+                sdr = query.ExecuteReader();
+                while (sdr.Read())
+                {
+                    nama_obat.Text = sdr.GetString(1);
+                    jenis_obat.Text = sdr.GetString(2);
+                    harga.Text = sdr.GetInt32(3).ToString();
+                }
             }
-            conn.Close();
+            catch (Exception et)
+            {
+                MessageBox.Show(et.Message);
+            }
         }
     }
 }

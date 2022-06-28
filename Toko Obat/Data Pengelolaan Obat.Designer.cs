@@ -32,14 +32,14 @@ namespace Toko_Obat
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.kode_pengelolaan = new System.Windows.Forms.TextBox();
+            this.jenis_obat = new System.Windows.Forms.TextBox();
+            this.kadaluarsa = new System.Windows.Forms.TextBox();
+            this.id_apoteker = new System.Windows.Forms.ComboBox();
+            this.kode_obat = new System.Windows.Forms.ComboBox();
+            this.harga = new System.Windows.Forms.TextBox();
+            this.efek_samping = new System.Windows.Forms.TextBox();
+            this.cara_penggunaan = new System.Windows.Forms.TextBox();
             this.Add = new System.Windows.Forms.Button();
             this.Create = new System.Windows.Forms.Button();
             this.Update = new System.Windows.Forms.Button();
@@ -57,7 +57,7 @@ namespace Toko_Obat
             this.dataPengelolaanObatBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.data_Pengelolaan_ObatTableAdapter = new Toko_Obat.Toko_ObatDataSetTableAdapters.Data_Pengelolaan_ObatTableAdapter();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.nama_obat = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.toko_ObatDataSet)).BeginInit();
@@ -85,65 +85,65 @@ namespace Toko_Obat
             this.dataGridView1.Size = new System.Drawing.Size(741, 174);
             this.dataGridView1.TabIndex = 1;
             // 
-            // textBox1
+            // kode_pengelolaan
             // 
-            this.textBox1.Location = new System.Drawing.Point(142, 74);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(121, 22);
-            this.textBox1.TabIndex = 2;
+            this.kode_pengelolaan.Location = new System.Drawing.Point(142, 74);
+            this.kode_pengelolaan.Name = "kode_pengelolaan";
+            this.kode_pengelolaan.Size = new System.Drawing.Size(121, 22);
+            this.kode_pengelolaan.TabIndex = 2;
             // 
-            // textBox2
+            // jenis_obat
             // 
-            this.textBox2.Location = new System.Drawing.Point(142, 195);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(121, 22);
-            this.textBox2.TabIndex = 3;
+            this.jenis_obat.Location = new System.Drawing.Point(142, 195);
+            this.jenis_obat.Name = "jenis_obat";
+            this.jenis_obat.Size = new System.Drawing.Size(121, 22);
+            this.jenis_obat.TabIndex = 3;
             // 
-            // textBox3
+            // kadaluarsa
             // 
-            this.textBox3.Location = new System.Drawing.Point(502, 69);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(121, 22);
-            this.textBox3.TabIndex = 4;
+            this.kadaluarsa.Location = new System.Drawing.Point(502, 69);
+            this.kadaluarsa.Name = "kadaluarsa";
+            this.kadaluarsa.Size = new System.Drawing.Size(121, 22);
+            this.kadaluarsa.TabIndex = 4;
             // 
-            // comboBox1
+            // id_apoteker
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(142, 104);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 5;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.id_apoteker.FormattingEnabled = true;
+            this.id_apoteker.Location = new System.Drawing.Point(142, 104);
+            this.id_apoteker.Name = "id_apoteker";
+            this.id_apoteker.Size = new System.Drawing.Size(121, 24);
+            this.id_apoteker.TabIndex = 5;
+            this.id_apoteker.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // comboBox2
+            // kode_obat
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(142, 137);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 24);
-            this.comboBox2.TabIndex = 6;
-            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            this.kode_obat.FormattingEnabled = true;
+            this.kode_obat.Location = new System.Drawing.Point(142, 137);
+            this.kode_obat.Name = "kode_obat";
+            this.kode_obat.Size = new System.Drawing.Size(121, 24);
+            this.kode_obat.TabIndex = 6;
+            this.kode_obat.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
-            // textBox4
+            // harga
             // 
-            this.textBox4.Location = new System.Drawing.Point(502, 101);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(121, 22);
-            this.textBox4.TabIndex = 7;
+            this.harga.Location = new System.Drawing.Point(502, 101);
+            this.harga.Name = "harga";
+            this.harga.Size = new System.Drawing.Size(121, 22);
+            this.harga.TabIndex = 7;
             // 
-            // textBox5
+            // efek_samping
             // 
-            this.textBox5.Location = new System.Drawing.Point(502, 137);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(121, 22);
-            this.textBox5.TabIndex = 8;
+            this.efek_samping.Location = new System.Drawing.Point(502, 137);
+            this.efek_samping.Name = "efek_samping";
+            this.efek_samping.Size = new System.Drawing.Size(121, 22);
+            this.efek_samping.TabIndex = 8;
             // 
-            // textBox7
+            // cara_penggunaan
             // 
-            this.textBox7.Location = new System.Drawing.Point(502, 172);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(121, 22);
-            this.textBox7.TabIndex = 10;
+            this.cara_penggunaan.Location = new System.Drawing.Point(502, 172);
+            this.cara_penggunaan.Name = "cara_penggunaan";
+            this.cara_penggunaan.Size = new System.Drawing.Size(121, 22);
+            this.cara_penggunaan.TabIndex = 10;
             // 
             // Add
             // 
@@ -291,12 +291,12 @@ namespace Toko_Obat
             this.label10.TabIndex = 25;
             this.label10.Text = "Nama Obat";
             // 
-            // textBox6
+            // nama_obat
             // 
-            this.textBox6.Location = new System.Drawing.Point(142, 167);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(121, 22);
-            this.textBox6.TabIndex = 24;
+            this.nama_obat.Location = new System.Drawing.Point(142, 167);
+            this.nama_obat.Name = "nama_obat";
+            this.nama_obat.Size = new System.Drawing.Size(121, 22);
+            this.nama_obat.TabIndex = 24;
             // 
             // Data_Pengelolaan_Obat
             // 
@@ -305,7 +305,7 @@ namespace Toko_Obat
             this.BackColor = System.Drawing.Color.Tomato;
             this.ClientSize = new System.Drawing.Size(800, 509);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.nama_obat);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -319,14 +319,14 @@ namespace Toko_Obat
             this.Controls.Add(this.Update);
             this.Controls.Add(this.Create);
             this.Controls.Add(this.Add);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.cara_penggunaan);
+            this.Controls.Add(this.efek_samping);
+            this.Controls.Add(this.harga);
+            this.Controls.Add(this.kode_obat);
+            this.Controls.Add(this.id_apoteker);
+            this.Controls.Add(this.kadaluarsa);
+            this.Controls.Add(this.jenis_obat);
+            this.Controls.Add(this.kode_pengelolaan);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
             this.Name = "Data_Pengelolaan_Obat";
@@ -346,14 +346,14 @@ namespace Toko_Obat
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox kode_pengelolaan;
+        private System.Windows.Forms.TextBox jenis_obat;
+        private System.Windows.Forms.TextBox kadaluarsa;
+        private System.Windows.Forms.ComboBox id_apoteker;
+        private System.Windows.Forms.ComboBox kode_obat;
+        private System.Windows.Forms.TextBox harga;
+        private System.Windows.Forms.TextBox efek_samping;
+        private System.Windows.Forms.TextBox cara_penggunaan;
         private System.Windows.Forms.Button Add;
         private System.Windows.Forms.Button Create;
         private System.Windows.Forms.Button Update;
@@ -371,6 +371,6 @@ namespace Toko_Obat
         private System.Windows.Forms.BindingSource dataPengelolaanObatBindingSource;
         private Toko_ObatDataSetTableAdapters.Data_Pengelolaan_ObatTableAdapter data_Pengelolaan_ObatTableAdapter;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox nama_obat;
     }
 }

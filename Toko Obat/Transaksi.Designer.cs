@@ -30,26 +30,28 @@ namespace Toko_Obat
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.kode_transaksi = new System.Windows.Forms.TextBox();
+            this.kode_obat = new System.Windows.Forms.ComboBox();
+            this.id_pembeli = new System.Windows.Forms.ComboBox();
+            this.qty = new System.Windows.Forms.TextBox();
+            this.harga = new System.Windows.Forms.TextBox();
+            this.totalHarga = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.label = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Add = new System.Windows.Forms.Button();
             this.Create = new System.Windows.Forms.Button();
             this.Update = new System.Windows.Forms.Button();
             this.Delete = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.tgl_transaksi = new System.Windows.Forms.DateTimePicker();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.nama_obat = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -64,49 +66,50 @@ namespace Toko_Obat
             this.label1.TabIndex = 0;
             this.label1.Text = "Data Transaksi";
             // 
-            // textBox1
+            // kode_transaksi
             // 
-            this.textBox1.Location = new System.Drawing.Point(132, 79);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(121, 22);
-            this.textBox1.TabIndex = 1;
+            this.kode_transaksi.Location = new System.Drawing.Point(132, 79);
+            this.kode_transaksi.Name = "kode_transaksi";
+            this.kode_transaksi.Size = new System.Drawing.Size(121, 22);
+            this.kode_transaksi.TabIndex = 1;
             // 
-            // comboBox1
+            // kode_obat
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(132, 126);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 2;
+            this.kode_obat.FormattingEnabled = true;
+            this.kode_obat.Location = new System.Drawing.Point(132, 152);
+            this.kode_obat.Name = "kode_obat";
+            this.kode_obat.Size = new System.Drawing.Size(121, 24);
+            this.kode_obat.TabIndex = 2;
+            this.kode_obat.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // comboBox2
+            // id_pembeli
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(132, 166);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 24);
-            this.comboBox2.TabIndex = 3;
+            this.id_pembeli.FormattingEnabled = true;
+            this.id_pembeli.Location = new System.Drawing.Point(132, 112);
+            this.id_pembeli.Name = "id_pembeli";
+            this.id_pembeli.Size = new System.Drawing.Size(121, 24);
+            this.id_pembeli.TabIndex = 3;
             // 
-            // textBox3
+            // qty
             // 
-            this.textBox3.Location = new System.Drawing.Point(413, 79);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(121, 22);
-            this.textBox3.TabIndex = 5;
+            this.qty.Location = new System.Drawing.Point(414, 112);
+            this.qty.Name = "qty";
+            this.qty.Size = new System.Drawing.Size(121, 22);
+            this.qty.TabIndex = 5;
             // 
-            // textBox4
+            // harga
             // 
-            this.textBox4.Location = new System.Drawing.Point(413, 126);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(121, 22);
-            this.textBox4.TabIndex = 6;
+            this.harga.Location = new System.Drawing.Point(414, 159);
+            this.harga.Name = "harga";
+            this.harga.Size = new System.Drawing.Size(121, 22);
+            this.harga.TabIndex = 6;
             // 
-            // textBox5
+            // totalHarga
             // 
-            this.textBox5.Location = new System.Drawing.Point(413, 168);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(121, 22);
-            this.textBox5.TabIndex = 7;
+            this.totalHarga.Location = new System.Drawing.Point(414, 201);
+            this.totalHarga.Name = "totalHarga";
+            this.totalHarga.Size = new System.Drawing.Size(121, 22);
+            this.totalHarga.TabIndex = 7;
             // 
             // label2
             // 
@@ -120,7 +123,7 @@ namespace Toko_Obat
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(19, 129);
+            this.label3.Location = new System.Drawing.Point(19, 155);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(76, 17);
             this.label3.TabIndex = 10;
@@ -129,7 +132,7 @@ namespace Toko_Obat
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(19, 169);
+            this.label4.Location = new System.Drawing.Point(19, 115);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(75, 17);
             this.label4.TabIndex = 11;
@@ -139,7 +142,7 @@ namespace Toko_Obat
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(19, 212);
+            this.label5.Location = new System.Drawing.Point(301, 79);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(94, 17);
             this.label5.TabIndex = 12;
@@ -148,7 +151,7 @@ namespace Toko_Obat
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(300, 84);
+            this.label6.Location = new System.Drawing.Point(301, 117);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(30, 17);
             this.label6.TabIndex = 13;
@@ -157,20 +160,20 @@ namespace Toko_Obat
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(300, 126);
+            this.label7.Location = new System.Drawing.Point(301, 159);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(96, 17);
             this.label7.TabIndex = 14;
             this.label7.Text = "Harga Satuan";
             // 
-            // label8
+            // label
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(300, 169);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(83, 17);
-            this.label8.TabIndex = 15;
-            this.label8.Text = "Total Harga";
+            this.label.AutoSize = true;
+            this.label.Location = new System.Drawing.Point(302, 202);
+            this.label.Name = "label";
+            this.label.Size = new System.Drawing.Size(83, 17);
+            this.label.TabIndex = 15;
+            this.label.Text = "Total Harga";
             // 
             // dataGridView1
             // 
@@ -190,6 +193,7 @@ namespace Toko_Obat
             this.Add.TabIndex = 17;
             this.Add.Text = "Add";
             this.Add.UseVisualStyleBackColor = true;
+            this.Add.Click += new System.EventHandler(this.Add_Click);
             // 
             // Create
             // 
@@ -199,6 +203,7 @@ namespace Toko_Obat
             this.Create.TabIndex = 18;
             this.Create.Text = "Create";
             this.Create.UseVisualStyleBackColor = true;
+            this.Create.Click += new System.EventHandler(this.Create_Click);
             // 
             // Update
             // 
@@ -208,6 +213,7 @@ namespace Toko_Obat
             this.Update.TabIndex = 19;
             this.Update.Text = "Update";
             this.Update.UseVisualStyleBackColor = true;
+            this.Update.Click += new System.EventHandler(this.Update_Click);
             // 
             // Delete
             // 
@@ -218,12 +224,12 @@ namespace Toko_Obat
             this.Delete.Text = "Delete";
             this.Delete.UseVisualStyleBackColor = true;
             // 
-            // dateTimePicker1
+            // tgl_transaksi
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(130, 212);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(237, 22);
-            this.dateTimePicker1.TabIndex = 21;
+            this.tgl_transaksi.Location = new System.Drawing.Point(414, 79);
+            this.tgl_transaksi.Name = "tgl_transaksi";
+            this.tgl_transaksi.Size = new System.Drawing.Size(237, 22);
+            this.tgl_transaksi.TabIndex = 21;
             // 
             // pictureBox1
             // 
@@ -236,32 +242,50 @@ namespace Toko_Obat
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(19, 202);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(80, 17);
+            this.label8.TabIndex = 24;
+            this.label8.Text = "Nama Obat";
+            // 
+            // nama_obat
+            // 
+            this.nama_obat.Location = new System.Drawing.Point(132, 202);
+            this.nama_obat.Name = "nama_obat";
+            this.nama_obat.Size = new System.Drawing.Size(121, 22);
+            this.nama_obat.TabIndex = 23;
+            // 
             // Transaksi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCoral;
             this.ClientSize = new System.Drawing.Size(800, 490);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.nama_obat);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.tgl_transaksi);
             this.Controls.Add(this.Delete);
             this.Controls.Add(this.Update);
             this.Controls.Add(this.Create);
             this.Controls.Add(this.Add);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.totalHarga);
+            this.Controls.Add(this.harga);
+            this.Controls.Add(this.qty);
+            this.Controls.Add(this.id_pembeli);
+            this.Controls.Add(this.kode_obat);
+            this.Controls.Add(this.kode_transaksi);
             this.Controls.Add(this.label1);
             this.Name = "Transaksi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -277,25 +301,27 @@ namespace Toko_Obat
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox kode_transaksi;
+        private System.Windows.Forms.ComboBox kode_obat;
+        private System.Windows.Forms.ComboBox id_pembeli;
+        private System.Windows.Forms.TextBox qty;
+        private System.Windows.Forms.TextBox harga;
+        private System.Windows.Forms.TextBox totalHarga;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button Add;
         private System.Windows.Forms.Button Create;
         private System.Windows.Forms.Button Update;
         private System.Windows.Forms.Button Delete;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker tgl_transaksi;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox nama_obat;
     }
 }

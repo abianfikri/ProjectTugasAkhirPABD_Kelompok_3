@@ -15,6 +15,7 @@ namespace Toko_Obat
         public Login_Admin()
         {
             InitializeComponent();
+            //Ini admin
         }
 
         private void lg_Aptoker_Click(object sender, EventArgs e)

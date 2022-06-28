@@ -48,7 +48,8 @@ namespace Toko_Obat
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            new Home_Admin().Show();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

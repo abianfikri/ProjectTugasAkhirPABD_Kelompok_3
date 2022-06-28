@@ -1,0 +1,19 @@
+D:\TA PABD\Toko Obat\Toko Obat\bin\Debug\Toko Obat.exe.config
+D:\TA PABD\Toko Obat\Toko Obat\bin\Debug\Toko Obat.exe
+D:\TA PABD\Toko Obat\Toko Obat\bin\Debug\Toko Obat.pdb
+D:\TA PABD\Toko Obat\Toko Obat\obj\Debug\Toko Obat.csproj.AssemblyReference.cache
+D:\TA PABD\Toko Obat\Toko Obat\obj\Debug\Toko_Obat.Form1.resources
+D:\TA PABD\Toko Obat\Toko Obat\obj\Debug\Toko_Obat.Login_Admin.resources
+D:\TA PABD\Toko Obat\Toko Obat\obj\Debug\Toko_Obat.Properties.Resources.resources
+D:\TA PABD\Toko Obat\Toko Obat\obj\Debug\Toko Obat.csproj.GenerateResource.cache
+D:\TA PABD\Toko Obat\Toko Obat\obj\Debug\Toko Obat.csproj.CoreCompileInputs.cache
+D:\TA PABD\Toko Obat\Toko Obat\obj\Debug\Toko Obat.exe
+D:\TA PABD\Toko Obat\Toko Obat\obj\Debug\Toko Obat.pdb
+D:\TA PABD\Toko Obat\Toko Obat\obj\Debug\Toko_Obat.Login_Apoteker.resources
+D:\TA PABD\Toko Obat\Toko Obat\obj\Debug\Toko_Obat.Data_Pengelolaan_Obat.resources
+D:\TA PABD\Toko Obat\Toko Obat\obj\Debug\Toko_Obat.Home_Apoteker.resources
+D:\TA PABD\Toko Obat\Toko Obat\obj\Debug\Toko_Obat.Pembeli.resources
+D:\TA PABD\Toko Obat\Toko Obat\obj\Debug\Toko_Obat.Transaksi.resources
+D:\TA PABD\Toko Obat\Toko Obat\obj\Debug\Toko_Obat.Apoteker.resources
+D:\TA PABD\Toko Obat\Toko Obat\obj\Debug\Toko_Obat.Home_Admin.resources
+D:\TA PABD\Toko Obat\Toko Obat\obj\Debug\Toko_Obat.Obat.resources

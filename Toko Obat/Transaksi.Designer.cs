@@ -122,18 +122,19 @@ namespace Toko_Obat
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(19, 129);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(80, 17);
+            this.label3.Size = new System.Drawing.Size(76, 17);
             this.label3.TabIndex = 10;
-            this.label3.Text = "Nama Obat";
+            this.label3.Text = "Kode Obat";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(19, 169);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(99, 17);
+            this.label4.Size = new System.Drawing.Size(75, 17);
             this.label4.TabIndex = 11;
-            this.label4.Text = "Nama Pembeli";
+            this.label4.Text = "ID Pembeli";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 

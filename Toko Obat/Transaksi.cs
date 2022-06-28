@@ -31,7 +31,30 @@ namespace Toko_Obat
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
 
-                comboBox1.DisplayMember = "Nama_Obat";
+                comboBox1.DisplayMember = "Kode_Obat";
+                comboBox1.DataSource = dt;
+                conn.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+
+        }
+
+        void Fill_Combo_Pembeli()
+        {
+            SqlConnection conn = new SqlConnection("Data Source=LAPTOP-91VJ4BQG;Initial Catalog=Toko_Obat;User ID=sa;Password=abianfikri");
+            SqlCommand query = new SqlCommand("Select * From Pembeli", conn);
+            SqlDataAdapter sda = new SqlDataAdapter(query);
+
+            try
+            {
+                conn.Open();
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+
+                comboBox1.DisplayMember = "Id_Pembeli";
                 comboBox1.DataSource = dt;
                 conn.Close();
             }
@@ -51,6 +74,11 @@ namespace Toko_Obat
         {
             this.Hide();
             new Home_Apoteker().Show();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

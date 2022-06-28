@@ -17,8 +17,50 @@ namespace Toko_Obat
         {
             InitializeComponent();
             Fill_Combo_Obat();
+            Fill_Combo_Pembeli();
         }
 
+        // Insert Data
+        void insertData()
+        {
+            SqlConnection conn = new SqlConnection("Data Source=LAPTOP-91VJ4BQG;Initial Catalog=Toko_Obat;User ID=sa;Password=abianfikri");
+            try
+            {
+                conn.Open();
+                SqlCommand insert = new SqlCommand("INSERT INTO Transaksi (Kode_Transaksi, Id_Pembeli, Kode_Obat, Nama_Obat, Tgl_Transaksi, Qty, Harga_Satuan, Total_Harga) VALUES" +
+                    "('" + kode_transaksi.Text + "', '" + id_pembeli.Text + "', '" + kode_obat.Text + "', '" + nama_obat.Text + "', '" + tgl_transaksi.Value + "', '" + qty.Text + "', '" + harga.Text + "'," +
+                    "'" + totalHarga.Text + "')", conn);
+                insert.ExecuteNonQuery();
+                conn.Close();
+                MessageBox.Show("Success Save Data");
+                getData();
+            }
+            catch(Exception p)
+            {
+                MessageBox.Show(p.Message);
+            }
+        }
+
+        // getData
+        void getData()
+        {
+            SqlConnection conn = new SqlConnection("Data Source=LAPTOP-91VJ4BQG;Initial Catalog=Toko_Obat;User ID=sa;Password=abianfikri");
+            try
+            {
+                conn.Open();
+                SqlCommand show = new SqlCommand("SELECT * FROM Transaksi", conn);
+                SqlDataAdapter sda = new SqlDataAdapter(show);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                dataGridView1.DataSource = dt;
+            }
+            catch (Exception p)
+            {
+                MessageBox.Show(p.Message);
+            }
+        }
+
+        // ComboBox Obat
         void Fill_Combo_Obat()
         {
             SqlConnection conn = new SqlConnection("Data Source=LAPTOP-91VJ4BQG;Initial Catalog=Toko_Obat;User ID=sa;Password=abianfikri");
@@ -42,6 +84,7 @@ namespace Toko_Obat
 
         }
 
+        // ComboBox Pembeli
         void Fill_Combo_Pembeli()
         {
             SqlConnection conn = new SqlConnection("Data Source=LAPTOP-91VJ4BQG;Initial Catalog=Toko_Obat;User ID=sa;Password=abianfikri");
@@ -54,8 +97,8 @@ namespace Toko_Obat
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
 
-                kode_obat.DisplayMember = "Id_Pembeli";
-                kode_obat.DataSource = dt;
+                id_pembeli.DisplayMember = "Id_Pembeli";
+                id_pembeli.DataSource = dt;
                 conn.Close();
             }
             catch (Exception e)
@@ -67,6 +110,8 @@ namespace Toko_Obat
 
         private void Transaksi_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'toko_ObatDataSet.Transaksi' table. You can move, or remove it, as needed.
+            this.transaksiTableAdapter.Fill(this.toko_ObatDataSet.Transaksi);
             nama_obat.Enabled = false;
             harga.Enabled = false;
         }
@@ -84,7 +129,6 @@ namespace Toko_Obat
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
             SqlConnection conn = new SqlConnection("Data Source=LAPTOP-91VJ4BQG;Initial Catalog=Toko_Obat;User ID=sa;Password=abianfikri");
             SqlCommand query = new SqlCommand("Select * From Obat", conn);
             SqlDataReader sdr;
@@ -129,10 +173,14 @@ namespace Toko_Obat
 
         private void Create_Click(object sender, EventArgs e)
         {
+            SqlConnection conn = new SqlConnection("Data Source=LAPTOP-91VJ4BQG;Initial Catalog=Toko_Obat;User ID=sa;Password=abianfikri");
             Add.Enabled = true;
             Create.Enabled = false;
             Update.Enabled = true;
             Delete.Enabled = true;
+
+            insertData();
+            conn.Close();
         }
 
         private void Update_Click(object sender, EventArgs e)
@@ -141,6 +189,11 @@ namespace Toko_Obat
             Create.Enabled = true;
             Update.Enabled = false;
             Delete.Enabled = true;
+        }
+
+        private void qty_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

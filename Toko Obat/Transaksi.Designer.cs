@@ -29,6 +29,7 @@ namespace Toko_Obat
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.kode_transaksi = new System.Windows.Forms.TextBox();
             this.kode_obat = new System.Windows.Forms.ComboBox();
@@ -44,6 +45,16 @@ namespace Toko_Obat
             this.label7 = new System.Windows.Forms.Label();
             this.label = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.kodeTransaksiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idPembeliDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kodeObatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.namaObatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tglTransaksiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.qtyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hargaSatuanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.totalHargaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.transaksiBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.toko_ObatDataSet = new Toko_Obat.Toko_ObatDataSet();
             this.Add = new System.Windows.Forms.Button();
             this.Create = new System.Windows.Forms.Button();
             this.Update = new System.Windows.Forms.Button();
@@ -52,7 +63,10 @@ namespace Toko_Obat
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.nama_obat = new System.Windows.Forms.TextBox();
+            this.transaksiTableAdapter = new Toko_Obat.Toko_ObatDataSetTableAdapters.TransaksiTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.transaksiBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.toko_ObatDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -96,6 +110,7 @@ namespace Toko_Obat
             this.qty.Name = "qty";
             this.qty.Size = new System.Drawing.Size(121, 22);
             this.qty.TabIndex = 5;
+            this.qty.TextChanged += new System.EventHandler(this.qty_TextChanged);
             // 
             // harga
             // 
@@ -177,13 +192,91 @@ namespace Toko_Obat
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(34, 317);
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.kodeTransaksiDataGridViewTextBoxColumn,
+            this.idPembeliDataGridViewTextBoxColumn,
+            this.kodeObatDataGridViewTextBoxColumn,
+            this.namaObatDataGridViewTextBoxColumn,
+            this.tglTransaksiDataGridViewTextBoxColumn,
+            this.qtyDataGridViewTextBoxColumn,
+            this.hargaSatuanDataGridViewTextBoxColumn,
+            this.totalHargaDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.transaksiBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(7, 317);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(730, 161);
+            this.dataGridView1.Size = new System.Drawing.Size(923, 180);
             this.dataGridView1.TabIndex = 16;
+            // 
+            // kodeTransaksiDataGridViewTextBoxColumn
+            // 
+            this.kodeTransaksiDataGridViewTextBoxColumn.DataPropertyName = "Kode_Transaksi";
+            this.kodeTransaksiDataGridViewTextBoxColumn.HeaderText = "Kode_Transaksi";
+            this.kodeTransaksiDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.kodeTransaksiDataGridViewTextBoxColumn.Name = "kodeTransaksiDataGridViewTextBoxColumn";
+            // 
+            // idPembeliDataGridViewTextBoxColumn
+            // 
+            this.idPembeliDataGridViewTextBoxColumn.DataPropertyName = "Id_Pembeli";
+            this.idPembeliDataGridViewTextBoxColumn.HeaderText = "Id_Pembeli";
+            this.idPembeliDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idPembeliDataGridViewTextBoxColumn.Name = "idPembeliDataGridViewTextBoxColumn";
+            // 
+            // kodeObatDataGridViewTextBoxColumn
+            // 
+            this.kodeObatDataGridViewTextBoxColumn.DataPropertyName = "Kode_Obat";
+            this.kodeObatDataGridViewTextBoxColumn.HeaderText = "Kode_Obat";
+            this.kodeObatDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.kodeObatDataGridViewTextBoxColumn.Name = "kodeObatDataGridViewTextBoxColumn";
+            // 
+            // namaObatDataGridViewTextBoxColumn
+            // 
+            this.namaObatDataGridViewTextBoxColumn.DataPropertyName = "Nama_Obat";
+            this.namaObatDataGridViewTextBoxColumn.HeaderText = "Nama_Obat";
+            this.namaObatDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.namaObatDataGridViewTextBoxColumn.Name = "namaObatDataGridViewTextBoxColumn";
+            // 
+            // tglTransaksiDataGridViewTextBoxColumn
+            // 
+            this.tglTransaksiDataGridViewTextBoxColumn.DataPropertyName = "Tgl_Transaksi";
+            this.tglTransaksiDataGridViewTextBoxColumn.HeaderText = "Tgl_Transaksi";
+            this.tglTransaksiDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.tglTransaksiDataGridViewTextBoxColumn.Name = "tglTransaksiDataGridViewTextBoxColumn";
+            // 
+            // qtyDataGridViewTextBoxColumn
+            // 
+            this.qtyDataGridViewTextBoxColumn.DataPropertyName = "Qty";
+            this.qtyDataGridViewTextBoxColumn.HeaderText = "Qty";
+            this.qtyDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.qtyDataGridViewTextBoxColumn.Name = "qtyDataGridViewTextBoxColumn";
+            // 
+            // hargaSatuanDataGridViewTextBoxColumn
+            // 
+            this.hargaSatuanDataGridViewTextBoxColumn.DataPropertyName = "Harga_Satuan";
+            this.hargaSatuanDataGridViewTextBoxColumn.HeaderText = "Harga_Satuan";
+            this.hargaSatuanDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.hargaSatuanDataGridViewTextBoxColumn.Name = "hargaSatuanDataGridViewTextBoxColumn";
+            // 
+            // totalHargaDataGridViewTextBoxColumn
+            // 
+            this.totalHargaDataGridViewTextBoxColumn.DataPropertyName = "Total_Harga";
+            this.totalHargaDataGridViewTextBoxColumn.HeaderText = "Total_Harga";
+            this.totalHargaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.totalHargaDataGridViewTextBoxColumn.Name = "totalHargaDataGridViewTextBoxColumn";
+            // 
+            // transaksiBindingSource
+            // 
+            this.transaksiBindingSource.DataMember = "Transaksi";
+            this.transaksiBindingSource.DataSource = this.toko_ObatDataSet;
+            // 
+            // toko_ObatDataSet
+            // 
+            this.toko_ObatDataSet.DataSetName = "Toko_ObatDataSet";
+            this.toko_ObatDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // Add
             // 
@@ -258,12 +351,16 @@ namespace Toko_Obat
             this.nama_obat.Size = new System.Drawing.Size(121, 22);
             this.nama_obat.TabIndex = 23;
             // 
+            // transaksiTableAdapter
+            // 
+            this.transaksiTableAdapter.ClearBeforeFill = true;
+            // 
             // Transaksi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCoral;
-            this.ClientSize = new System.Drawing.Size(800, 490);
+            this.ClientSize = new System.Drawing.Size(965, 524);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.nama_obat);
             this.Controls.Add(this.pictureBox1);
@@ -292,6 +389,8 @@ namespace Toko_Obat
             this.Text = "Transaksi";
             this.Load += new System.EventHandler(this.Transaksi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.transaksiBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.toko_ObatDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -323,5 +422,16 @@ namespace Toko_Obat
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox nama_obat;
+        private Toko_ObatDataSet toko_ObatDataSet;
+        private System.Windows.Forms.BindingSource transaksiBindingSource;
+        private Toko_ObatDataSetTableAdapters.TransaksiTableAdapter transaksiTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn kodeTransaksiDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idPembeliDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn kodeObatDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn namaObatDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tglTransaksiDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn qtyDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hargaSatuanDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn totalHargaDataGridViewTextBoxColumn;
     }
 }

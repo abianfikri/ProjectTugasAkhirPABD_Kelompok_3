@@ -79,12 +79,6 @@ namespace Toko_Obat
 
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            new Home_Apoteker().Show();
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
             

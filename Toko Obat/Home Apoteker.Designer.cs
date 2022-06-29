@@ -87,6 +87,7 @@ namespace Toko_Obat
             this.Name = "Home_Apoteker";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home_Apoteker";
+            this.Load += new System.EventHandler(this.Home_Apoteker_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

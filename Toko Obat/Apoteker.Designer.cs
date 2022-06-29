@@ -29,23 +29,33 @@ namespace Toko_Obat
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.id_apoteker = new System.Windows.Forms.TextBox();
+            this.nama_apoteker = new System.Windows.Forms.TextBox();
+            this.alamat = new System.Windows.Forms.TextBox();
+            this.no_telp = new System.Windows.Forms.TextBox();
             this.Add = new System.Windows.Forms.Button();
             this.Create = new System.Windows.Forms.Button();
             this.Update = new System.Windows.Forms.Button();
             this.Delete = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.toko_ObatDataSet = new Toko_Obat.Toko_ObatDataSet();
+            this.apotekerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.apotekerTableAdapter = new Toko_Obat.Toko_ObatDataSetTableAdapters.ApotekerTableAdapter();
+            this.idApotekerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.namaApotekerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.alamatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.noTelpDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.toko_ObatDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.apotekerBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -94,34 +104,34 @@ namespace Toko_Obat
             this.label5.TabIndex = 4;
             this.label5.Text = "Data Apoteker";
             // 
-            // textBox1
+            // id_apoteker
             // 
-            this.textBox1.Location = new System.Drawing.Point(208, 64);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(133, 22);
-            this.textBox1.TabIndex = 5;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.id_apoteker.Location = new System.Drawing.Point(208, 64);
+            this.id_apoteker.Name = "id_apoteker";
+            this.id_apoteker.Size = new System.Drawing.Size(133, 22);
+            this.id_apoteker.TabIndex = 5;
+            this.id_apoteker.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // textBox2
+            // nama_apoteker
             // 
-            this.textBox2.Location = new System.Drawing.Point(208, 114);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(133, 22);
-            this.textBox2.TabIndex = 6;
+            this.nama_apoteker.Location = new System.Drawing.Point(208, 114);
+            this.nama_apoteker.Name = "nama_apoteker";
+            this.nama_apoteker.Size = new System.Drawing.Size(133, 22);
+            this.nama_apoteker.TabIndex = 6;
             // 
-            // textBox3
+            // alamat
             // 
-            this.textBox3.Location = new System.Drawing.Point(208, 162);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(133, 22);
-            this.textBox3.TabIndex = 7;
+            this.alamat.Location = new System.Drawing.Point(208, 162);
+            this.alamat.Name = "alamat";
+            this.alamat.Size = new System.Drawing.Size(133, 22);
+            this.alamat.TabIndex = 7;
             // 
-            // textBox4
+            // no_telp
             // 
-            this.textBox4.Location = new System.Drawing.Point(208, 209);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(133, 22);
-            this.textBox4.TabIndex = 8;
+            this.no_telp.Location = new System.Drawing.Point(208, 209);
+            this.no_telp.Name = "no_telp";
+            this.no_telp.Size = new System.Drawing.Size(133, 22);
+            this.no_telp.TabIndex = 8;
             // 
             // Add
             // 
@@ -165,13 +175,22 @@ namespace Toko_Obat
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idApotekerDataGridViewTextBoxColumn,
+            this.namaApotekerDataGridViewTextBoxColumn,
+            this.alamatDataGridViewTextBoxColumn,
+            this.noTelpDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.apotekerBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(58, 289);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(690, 150);
             this.dataGridView1.TabIndex = 13;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // pictureBox1
             // 
@@ -183,6 +202,48 @@ namespace Toko_Obat
             this.pictureBox1.TabIndex = 24;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // toko_ObatDataSet
+            // 
+            this.toko_ObatDataSet.DataSetName = "Toko_ObatDataSet";
+            this.toko_ObatDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // apotekerBindingSource
+            // 
+            this.apotekerBindingSource.DataMember = "Apoteker";
+            this.apotekerBindingSource.DataSource = this.toko_ObatDataSet;
+            // 
+            // apotekerTableAdapter
+            // 
+            this.apotekerTableAdapter.ClearBeforeFill = true;
+            // 
+            // idApotekerDataGridViewTextBoxColumn
+            // 
+            this.idApotekerDataGridViewTextBoxColumn.DataPropertyName = "Id_Apoteker";
+            this.idApotekerDataGridViewTextBoxColumn.HeaderText = "Id_Apoteker";
+            this.idApotekerDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idApotekerDataGridViewTextBoxColumn.Name = "idApotekerDataGridViewTextBoxColumn";
+            // 
+            // namaApotekerDataGridViewTextBoxColumn
+            // 
+            this.namaApotekerDataGridViewTextBoxColumn.DataPropertyName = "Nama_Apoteker";
+            this.namaApotekerDataGridViewTextBoxColumn.HeaderText = "Nama_Apoteker";
+            this.namaApotekerDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.namaApotekerDataGridViewTextBoxColumn.Name = "namaApotekerDataGridViewTextBoxColumn";
+            // 
+            // alamatDataGridViewTextBoxColumn
+            // 
+            this.alamatDataGridViewTextBoxColumn.DataPropertyName = "Alamat";
+            this.alamatDataGridViewTextBoxColumn.HeaderText = "Alamat";
+            this.alamatDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.alamatDataGridViewTextBoxColumn.Name = "alamatDataGridViewTextBoxColumn";
+            // 
+            // noTelpDataGridViewTextBoxColumn
+            // 
+            this.noTelpDataGridViewTextBoxColumn.DataPropertyName = "No_Telp";
+            this.noTelpDataGridViewTextBoxColumn.HeaderText = "No_Telp";
+            this.noTelpDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.noTelpDataGridViewTextBoxColumn.Name = "noTelpDataGridViewTextBoxColumn";
             // 
             // Apoteker
             // 
@@ -196,10 +257,10 @@ namespace Toko_Obat
             this.Controls.Add(this.Update);
             this.Controls.Add(this.Create);
             this.Controls.Add(this.Add);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.no_telp);
+            this.Controls.Add(this.alamat);
+            this.Controls.Add(this.nama_apoteker);
+            this.Controls.Add(this.id_apoteker);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -208,8 +269,11 @@ namespace Toko_Obat
             this.Name = "Apoteker";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Apoteker";
+            this.Load += new System.EventHandler(this.Apoteker_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.toko_ObatDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.apotekerBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -222,15 +286,22 @@ namespace Toko_Obat
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox id_apoteker;
+        private System.Windows.Forms.TextBox nama_apoteker;
+        private System.Windows.Forms.TextBox alamat;
+        private System.Windows.Forms.TextBox no_telp;
         private System.Windows.Forms.Button Add;
         private System.Windows.Forms.Button Create;
         private System.Windows.Forms.Button Update;
         private System.Windows.Forms.Button Delete;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private Toko_ObatDataSet toko_ObatDataSet;
+        private System.Windows.Forms.BindingSource apotekerBindingSource;
+        private Toko_ObatDataSetTableAdapters.ApotekerTableAdapter apotekerTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idApotekerDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn namaApotekerDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn alamatDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn noTelpDataGridViewTextBoxColumn;
     }
 }

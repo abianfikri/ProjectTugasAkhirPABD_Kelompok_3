@@ -34,5 +34,10 @@ namespace Toko_Obat
             this.Hide();
             new Transaksi().Show();
         }
+
+        private void Home_Apoteker_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

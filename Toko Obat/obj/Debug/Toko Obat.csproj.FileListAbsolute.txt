@@ -74,3 +74,22 @@ C:\Users\Athari Zaki\Source\Repos\UAS_PABD\Toko Obat\obj\Debug\Toko Obat.csproj.
 C:\Users\Athari Zaki\Source\Repos\UAS_PABD\Toko Obat\obj\Debug\Toko Obat.csproj.CoreCompileInputs.cache
 C:\Users\Athari Zaki\Source\Repos\UAS_PABD\Toko Obat\obj\Debug\Toko Obat.exe
 C:\Users\Athari Zaki\Source\Repos\UAS_PABD\Toko Obat\obj\Debug\Toko Obat.pdb
+C:\Users\User\Source\Repos\UAS_PABD\Toko Obat\obj\Debug\Toko Obat.csproj.AssemblyReference.cache
+C:\Users\User\Source\Repos\UAS_PABD\Toko Obat\obj\Debug\Toko_Obat.Apoteker.resources
+C:\Users\User\Source\Repos\UAS_PABD\Toko Obat\obj\Debug\Toko_Obat.Data_Pengelolaan_Obat.resources
+C:\Users\User\Source\Repos\UAS_PABD\Toko Obat\obj\Debug\Toko_Obat.Form1.resources
+C:\Users\User\Source\Repos\UAS_PABD\Toko Obat\obj\Debug\Toko_Obat.Home_Admin.resources
+C:\Users\User\Source\Repos\UAS_PABD\Toko Obat\obj\Debug\Toko_Obat.Home_Apoteker.resources
+C:\Users\User\Source\Repos\UAS_PABD\Toko Obat\obj\Debug\Toko_Obat.Login_Admin.resources
+C:\Users\User\Source\Repos\UAS_PABD\Toko Obat\obj\Debug\Toko_Obat.Login_Apoteker.resources
+C:\Users\User\Source\Repos\UAS_PABD\Toko Obat\obj\Debug\Toko_Obat.Obat.resources
+C:\Users\User\Source\Repos\UAS_PABD\Toko Obat\obj\Debug\Toko_Obat.Pembeli.resources
+C:\Users\User\Source\Repos\UAS_PABD\Toko Obat\obj\Debug\Toko_Obat.Properties.Resources.resources
+C:\Users\User\Source\Repos\UAS_PABD\Toko Obat\obj\Debug\Toko_Obat.Transaksi.resources
+C:\Users\User\Source\Repos\UAS_PABD\Toko Obat\obj\Debug\Toko Obat.csproj.GenerateResource.cache
+C:\Users\User\Source\Repos\UAS_PABD\Toko Obat\obj\Debug\Toko Obat.csproj.CoreCompileInputs.cache
+C:\Users\User\Source\Repos\UAS_PABD\Toko Obat\obj\Debug\Toko Obat.exe
+C:\Users\User\Source\Repos\UAS_PABD\Toko Obat\obj\Debug\Toko Obat.pdb
+C:\Users\User\Source\Repos\UAS_PABD\Toko Obat\bin\Debug\Toko Obat.exe.config
+C:\Users\User\Source\Repos\UAS_PABD\Toko Obat\bin\Debug\Toko Obat.exe
+C:\Users\User\Source\Repos\UAS_PABD\Toko Obat\bin\Debug\Toko Obat.pdb

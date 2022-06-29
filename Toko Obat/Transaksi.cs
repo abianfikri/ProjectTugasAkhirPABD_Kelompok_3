@@ -35,7 +35,7 @@ namespace Toko_Obat
                 MessageBox.Show("Success Save Data");
                 getData();
             }
-            catch(Exception p)
+            catch (Exception p)
             {
                 MessageBox.Show(p.Message);
             }
@@ -59,6 +59,47 @@ namespace Toko_Obat
                 MessageBox.Show(p.Message);
             }
         }
+
+        // Update Data
+        void updateData()
+        {
+            SqlConnection conn = new SqlConnection("Data Source=LAPTOP-91VJ4BQG;Initial Catalog=Toko_Obat;User ID=sa;Password=abianfikri");
+
+            try
+            {
+                conn.Open();
+                SqlCommand query = new SqlCommand("Update Transaksi set Kode_Transaksi = '" + kode_transaksi.Text + "', Id_Pembeli = '" + id_pembeli.Text + "', Kode_Obat = '" + kode_obat.Text + "', Nama_Obat = '" + nama_obat.Text + "', " +
+                    "Tgl_Transaksi = '" + tgl_transaksi.Value + "', Qty = '" + qty.Text + "', Harga_Satuan = '" + harga.Text + "', Total_Harga = '" + totalHarga.Text + "' WHERE Kode_Transaksi = '" + kode_transaksi.Text + "'", conn);
+                query.ExecuteNonQuery();
+                conn.Close();
+                MessageBox.Show("Success Edit Data");
+                getData();
+            }
+            catch (Exception ep)
+            {
+                MessageBox.Show(ep.Message);
+            }
+        }
+
+        void deleteData()
+        {
+            SqlConnection conn = new SqlConnection("Data Source=LAPTOP-91VJ4BQG;Initial Catalog=Toko_Obat;User ID=sa;Password=abianfikri");
+
+            try
+            {
+                conn.Open();
+                SqlCommand query = new SqlCommand("DELETE Transaksi WHERE Kode_Transaksi = '"+kode_transaksi.Text+"'", conn);
+                query.ExecuteNonQuery();
+                conn.Close();
+                MessageBox.Show("Success Delete Data");
+                getData();
+            }
+            catch(Exception ed)
+            {
+                MessageBox.Show(ed.Message);
+            }
+        }
+
 
         // ComboBox Obat
         void Fill_Combo_Obat()
@@ -132,7 +173,7 @@ namespace Toko_Obat
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             SqlConnection conn = new SqlConnection("Data Source=LAPTOP-91VJ4BQG;Initial Catalog=Toko_Obat;User ID=sa;Password=abianfikri");
-            SqlCommand query = new SqlCommand("Select * From Obat", conn);
+            SqlCommand query = new SqlCommand("Select * From Obat where Kode_Obat = '"+kode_obat.Text+"'", conn);
             SqlDataReader sdr;
 
             try
@@ -191,11 +232,34 @@ namespace Toko_Obat
             Create.Enabled = true;
             Update.Enabled = false;
             Delete.Enabled = true;
+
+            updateData();
         }
 
         private void qty_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void Delete_Click(object sender, EventArgs e)
+        {
+            deleteData();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+            {
+                dataGridView1.CurrentRow.Selected = true;
+                kode_transaksi.Text = dataGridView1.Rows[e.RowIndex].Cells[0].FormattedValue.ToString();
+                id_pembeli.Text = dataGridView1.Rows[e.RowIndex].Cells[1].FormattedValue.ToString();
+                kode_obat.Text = dataGridView1.Rows[e.RowIndex].Cells[2].FormattedValue.ToString();
+                nama_obat.Text = dataGridView1.Rows[e.RowIndex].Cells[3].FormattedValue.ToString();
+                tgl_transaksi.Text = dataGridView1.Rows[e.RowIndex].Cells[4].FormattedValue.ToString();
+                qty.Text = dataGridView1.Rows[e.RowIndex].Cells[5].FormattedValue.ToString();
+                harga.Text = dataGridView1.Rows[e.RowIndex].Cells[6].FormattedValue.ToString();
+                totalHarga.Text = dataGridView1.Rows[e.RowIndex].Cells[7].FormattedValue.ToString();
+            }
         }
     }
 }

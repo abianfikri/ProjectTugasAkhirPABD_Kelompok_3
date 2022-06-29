@@ -75,6 +75,7 @@ namespace Toko_Obat
             this.Name = "Home_Admin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home_Admin";
+            this.Load += new System.EventHandler(this.Home_Admin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

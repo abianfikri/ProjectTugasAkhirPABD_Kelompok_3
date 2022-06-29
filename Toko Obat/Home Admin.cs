@@ -33,5 +33,10 @@ namespace Toko_Obat
         {
             
         }
+
+        private void Home_Admin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

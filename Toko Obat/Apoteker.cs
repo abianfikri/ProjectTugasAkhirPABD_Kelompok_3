@@ -20,7 +20,7 @@ namespace Toko_Obat
 
         void createData()
         {
-            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-3O1VMEB\\ZAKI;Initial Catalog=Toko_Obat;User ID=sa;Password=atharizaki123");
+            SqlConnection conn = new SqlConnection("Data Source=LAPTOP-91VJ4BQG;Initial Catalog=Toko_Obat;User ID=sa;Password=abianfikri");
             conn.Open();
             SqlCommand cmd = new SqlCommand("insert into Apoteker values (@Id_Apoteker, @Nama_Apoteker, @Alamat, @No_Telp)", conn);
             cmd.Parameters.AddWithValue("@Id_Apoteker", id_apoteker.Text);
@@ -35,7 +35,7 @@ namespace Toko_Obat
 
         void getData()
         {
-            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-3O1VMEB\\ZAKI;Initial Catalog=Toko_Obat;User ID=sa;Password=atharizaki123");
+            SqlConnection conn = new SqlConnection("Data Source=LAPTOP-91VJ4BQG;Initial Catalog=Toko_Obat;User ID=sa;Password=abianfikri");
             conn.Open();
             SqlCommand cmd = new SqlCommand("Select * from Apoteker", conn);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -46,7 +46,7 @@ namespace Toko_Obat
 
         void updateData()
         {
-            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-3O1VMEB\\ZAKI;Initial Catalog=Toko_Obat;User ID=sa;Password=atharizaki123");
+            SqlConnection conn = new SqlConnection("Data Source=LAPTOP-91VJ4BQG;Initial Catalog=Toko_Obat;User ID=sa;Password=abianfikri");
             conn.Open();
             SqlCommand cmd = new SqlCommand("Update Apoteker set Nama_Apoteker=@Nama_Apoteker, Alamat=@Alamat, No_Telp=@No_Telp where ID_Apoteker=@ID_Apoteker", conn);
             cmd.Parameters.AddWithValue("@Id_Apoteker", id_apoteker.Text);
@@ -62,8 +62,7 @@ namespace Toko_Obat
 
         void deleteData()
         {
-            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-3O1VMEB\\ZAKI;Initial Catalog=Toko_Obat;User ID=sa;Password=atharizaki123");
-            conn.Open();
+            SqlConnection conn = new SqlConnection("Data Source=LAPTOP-91VJ4BQG;Initial Catalog=Toko_Obat;User ID=sa;Password=abianfikri");
             SqlCommand cmd = new SqlCommand("Delete Apoteker where Id_Apoteker=@Id_Apoteker", conn);
             cmd.Parameters.AddWithValue("@Id_Apoteker", id_apoteker.Text);
             cmd.ExecuteNonQuery();

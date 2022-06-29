@@ -143,6 +143,7 @@ namespace Toko_Obat
             this.Name = "Login_Admin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login_Admin";
+            this.Load += new System.EventHandler(this.Login_Admin_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

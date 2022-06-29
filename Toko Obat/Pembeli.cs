@@ -20,12 +20,12 @@ namespace Toko_Obat
 
         void insertData ()
         {
-            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-3O1VMEB\\ZAKI;Initial Catalog=Toko_Obat;User ID=sa;Password=atharizaki123");
+            SqlConnection conn = new SqlConnection("Data Source=LAPTOP-91VJ4BQG;Initial Catalog=Toko_Obat;User ID=sa;Password=abianfikri");
             try
             {
                 conn.Open();
                 SqlCommand insert = new SqlCommand("INSERT INTO Pembeli (Id_Pembeli, Nama_Pembeli) VALUES" +
-                    "('"+ Id_Pembeli.Text + "', '" + Nama_Pembeli +"')", conn);
+                    "('"+ Id_Pembeli.Text + "', '" + Nama_Pembeli.Text +"')", conn);
                 insert.ExecuteNonQuery();
                 conn.Close();
                 MessageBox.Show("Success Save Data");
@@ -39,7 +39,7 @@ namespace Toko_Obat
 
         void getData()
         {
-            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-3O1VMEB\\ZAKI;Initial Catalog=Toko_Obat;User ID=sa;Password=atharizaki123");
+            SqlConnection conn = new SqlConnection("Data Source=LAPTOP-91VJ4BQG;Initial Catalog=Toko_Obat;User ID=sa;Password=abianfikri");
             try
             {
                 conn.Open();
@@ -57,7 +57,7 @@ namespace Toko_Obat
 
         void updateData()
         {
-            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-3O1VMEB\\ZAKI;Initial Catalog=Toko_Obat;User ID=sa;Password=atharizaki123");
+            SqlConnection conn = new SqlConnection("Data Source=LAPTOP-91VJ4BQG;Initial Catalog=Toko_Obat;User ID=sa;Password=abianfikri");
             conn.Open();
             SqlCommand cmd = new SqlCommand("Update Pembeli set Id_Pembeli = @Id_Pembeli, Nama_Pembeli = @Nama_Pembeli where Id_Pembeli = @Id_Pembeli", conn);
             cmd.Parameters.AddWithValue("@Id_Pembeli", Id_Pembeli.Text);
@@ -71,7 +71,7 @@ namespace Toko_Obat
 
         void deleteData()
         {
-            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-3O1VMEB\\ZAKI;Initial Catalog=Toko_Obat;User ID=sa;Password=atharizaki123");
+            SqlConnection conn = new SqlConnection("Data Source=LAPTOP-91VJ4BQG;Initial Catalog=Toko_Obat;User ID=sa;Password=abianfikri");
             conn.Open();
             SqlCommand cmd = new SqlCommand("Delete Pembeli where Id_Pembeli = @Id_Pembeli", conn);
             cmd.Parameters.AddWithValue("@Id_Pembeli", Id_Pembeli.Text);
@@ -135,6 +135,23 @@ namespace Toko_Obat
         private void Id_Pembeli_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void Pembeli_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'toko_ObatDataSet.Pembeli' table. You can move, or remove it, as needed.
+            this.pembeliTableAdapter.Fill(this.toko_ObatDataSet.Pembeli);
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+            {
+                dataGridView1.CurrentRow.Selected = true;
+                Id_Pembeli.Text = dataGridView1.Rows[e.RowIndex].Cells[0].FormattedValue.ToString();
+                Nama_Pembeli.Text = dataGridView1.Rows[e.RowIndex].Cells[1].FormattedValue.ToString();
+            }
         }
     }
 

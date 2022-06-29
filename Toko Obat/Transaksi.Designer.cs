@@ -211,6 +211,7 @@ namespace Toko_Obat
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(923, 180);
             this.dataGridView1.TabIndex = 16;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // kodeTransaksiDataGridViewTextBoxColumn
             // 
@@ -316,6 +317,7 @@ namespace Toko_Obat
             this.Delete.TabIndex = 20;
             this.Delete.Text = "Delete";
             this.Delete.UseVisualStyleBackColor = true;
+            this.Delete.Click += new System.EventHandler(this.Delete_Click);
             // 
             // tgl_transaksi
             // 

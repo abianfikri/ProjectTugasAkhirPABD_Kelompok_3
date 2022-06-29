@@ -65,7 +65,7 @@ namespace Toko_Obat
         {
             SqlConnection conn = new SqlConnection("Data Source=LAPTOP-91VJ4BQG;Initial Catalog=Toko_Obat;User ID=sa;Password=abianfikri");
             conn.Open();
-            SqlCommand com = new SqlCommand("Update Obat set Kode_Obat=@Kode_Obat, Nama_Obat=@Nama_Obat, Jenis_Obat=@Jenis_Obat, Harga=@Harga", conn);
+            SqlCommand com = new SqlCommand("Update Obat set Kode_Obat=@Kode_Obat, Nama_Obat=@Nama_Obat, Jenis_Obat=@Jenis_Obat, Harga=@Harga where Kode_Obat = @Kode_Obat", conn);
             com.Parameters.AddWithValue("@Kode_Obat", textBox1.Text);
             com.Parameters.AddWithValue("@Nama_Obat", textBox2.Text);
             com.Parameters.AddWithValue("@Jenis_Obat", textBox3.Text);
@@ -108,6 +108,13 @@ namespace Toko_Obat
                 textBox3.Text = dataGridView1.Rows[e.RowIndex].Cells[2].FormattedValue.ToString();
                 textBox4.Text = dataGridView1.Rows[e.RowIndex].Cells[3].FormattedValue.ToString();
             }
+        }
+
+        private void Obat_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'toko_ObatDataSet.Obat' table. You can move, or remove it, as needed.
+            this.obatTableAdapter.Fill(this.toko_ObatDataSet.Obat);
+
         }
     }
 }

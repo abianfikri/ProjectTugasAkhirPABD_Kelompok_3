@@ -29,6 +29,7 @@ namespace Toko_Obat
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.Delete = new System.Windows.Forms.Button();
             this.Update = new System.Windows.Forms.Button();
             this.Create = new System.Windows.Forms.Button();
@@ -44,8 +45,17 @@ namespace Toko_Obat
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.toko_ObatDataSet = new Toko_Obat.Toko_ObatDataSet();
+            this.obatBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.obatTableAdapter = new Toko_Obat.Toko_ObatDataSetTableAdapters.ObatTableAdapter();
+            this.kodeObatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.namaObatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.jenisObatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hargaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.toko_ObatDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.obatBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // Delete
@@ -164,7 +174,15 @@ namespace Toko_Obat
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.kodeObatDataGridViewTextBoxColumn,
+            this.namaObatDataGridViewTextBoxColumn,
+            this.jenisObatDataGridViewTextBoxColumn,
+            this.hargaDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.obatBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(64, 288);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
@@ -183,6 +201,48 @@ namespace Toko_Obat
             this.pictureBox1.TabIndex = 27;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // toko_ObatDataSet
+            // 
+            this.toko_ObatDataSet.DataSetName = "Toko_ObatDataSet";
+            this.toko_ObatDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // obatBindingSource
+            // 
+            this.obatBindingSource.DataMember = "Obat";
+            this.obatBindingSource.DataSource = this.toko_ObatDataSet;
+            // 
+            // obatTableAdapter
+            // 
+            this.obatTableAdapter.ClearBeforeFill = true;
+            // 
+            // kodeObatDataGridViewTextBoxColumn
+            // 
+            this.kodeObatDataGridViewTextBoxColumn.DataPropertyName = "Kode_Obat";
+            this.kodeObatDataGridViewTextBoxColumn.HeaderText = "Kode_Obat";
+            this.kodeObatDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.kodeObatDataGridViewTextBoxColumn.Name = "kodeObatDataGridViewTextBoxColumn";
+            // 
+            // namaObatDataGridViewTextBoxColumn
+            // 
+            this.namaObatDataGridViewTextBoxColumn.DataPropertyName = "Nama_Obat";
+            this.namaObatDataGridViewTextBoxColumn.HeaderText = "Nama_Obat";
+            this.namaObatDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.namaObatDataGridViewTextBoxColumn.Name = "namaObatDataGridViewTextBoxColumn";
+            // 
+            // jenisObatDataGridViewTextBoxColumn
+            // 
+            this.jenisObatDataGridViewTextBoxColumn.DataPropertyName = "Jenis_Obat";
+            this.jenisObatDataGridViewTextBoxColumn.HeaderText = "Jenis_Obat";
+            this.jenisObatDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.jenisObatDataGridViewTextBoxColumn.Name = "jenisObatDataGridViewTextBoxColumn";
+            // 
+            // hargaDataGridViewTextBoxColumn
+            // 
+            this.hargaDataGridViewTextBoxColumn.DataPropertyName = "Harga";
+            this.hargaDataGridViewTextBoxColumn.HeaderText = "Harga";
+            this.hargaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.hargaDataGridViewTextBoxColumn.Name = "hargaDataGridViewTextBoxColumn";
             // 
             // Obat
             // 
@@ -208,8 +268,11 @@ namespace Toko_Obat
             this.Name = "Obat";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Obat";
+            this.Load += new System.EventHandler(this.Obat_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.toko_ObatDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.obatBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -232,5 +295,12 @@ namespace Toko_Obat
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private Toko_ObatDataSet toko_ObatDataSet;
+        private System.Windows.Forms.BindingSource obatBindingSource;
+        private Toko_ObatDataSetTableAdapters.ObatTableAdapter obatTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn kodeObatDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn namaObatDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn jenisObatDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hargaDataGridViewTextBoxColumn;
     }
 }

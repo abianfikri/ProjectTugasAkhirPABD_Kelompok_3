@@ -32,8 +32,8 @@ namespace Toko_Obat
         private void button1_Click(object sender, EventArgs e)
         {
             // Login Aplikasi Apoteker
-            SqlConnection con = new SqlConnection("Data Source=DESKTOP-3O1VMEB\\ZAKI;Initial Catalog=Toko_Obat;User ID=sa;Password=atharizaki123");
-            SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM Apoteker where Id_Apoteker = '" + user_apoteker.Text + "' AND Nama_Apoteker = '"+pass_apoteker.Text+"' ", con);
+            SqlConnection conn = new SqlConnection("Data Source=LAPTOP-91VJ4BQG;Initial Catalog=Toko_Obat;User ID=sa;Password=abianfikri");
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM Apoteker where Id_Apoteker = '" + user_apoteker.Text + "' AND Nama_Apoteker = '"+pass_apoteker.Text+"' ", conn);
             DataTable dt = new DataTable();
             sda.Fill(dt);
 

@@ -33,5 +33,16 @@ namespace Toko_Obat.Properties {
                 return ((string)(this["Toko_ObatConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=MEGANE\\ALDYAHMADFAUZI;Initial Catalog=Toko_Obat;User ID=sa;Password=K" +
+            "acamatahitam4321")]
+        public string Toko_ObatConnectionString1 {
+            get {
+                return ((string)(this["Toko_ObatConnectionString1"]));
+            }
+        }
     }
 }

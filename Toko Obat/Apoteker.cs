@@ -80,6 +80,8 @@ namespace Toko_Obat
             alamat.Text = "";
             no_telp.Text = "";
 
+            id_apoteker.Focus();
+
         }
 
         private void Create_Click(object sender, EventArgs e)
@@ -99,12 +101,6 @@ namespace Toko_Obat
             deleteData();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            new Home_Admin().Show();
-        }
-
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
@@ -115,6 +111,7 @@ namespace Toko_Obat
             // TODO: This line of code loads data into the 'toko_ObatDataSet.Apoteker' table. You can move, or remove it, as needed.
             this.apotekerTableAdapter.Fill(this.toko_ObatDataSet.Apoteker);
 
+            id_apoteker.Focus();
 
 
         }
@@ -129,6 +126,18 @@ namespace Toko_Obat
                 alamat.Text = dataGridView1.Rows[e.RowIndex].Cells[2].FormattedValue.ToString();
                 no_telp.Text = dataGridView1.Rows[e.RowIndex].Cells[3].FormattedValue.ToString();
             }
+        }
+
+        private void obat_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new Obat().Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new Login_Admin().Show();
         }
     }
 }

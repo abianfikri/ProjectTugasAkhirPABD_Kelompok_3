@@ -40,7 +40,7 @@ namespace Toko_Obat
             if(dt.Rows.Count > 0)
             {
                 this.Hide();
-                new Home_Apoteker().Show();
+                new Data_Pengelolaan_Obat().Show();
             }
             else
             {

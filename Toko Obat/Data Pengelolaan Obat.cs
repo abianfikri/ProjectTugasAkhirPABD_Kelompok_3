@@ -69,8 +69,9 @@ namespace Toko_Obat
 
         private void Data_Pengelolaan_Obat_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'toko_ObatDataSetOBAT.Data_Pengelolaan_Obat' table. You can move, or remove it, as needed.
+            this.data_Pengelolaan_ObatTableAdapter1.Fill(this.toko_ObatDataSetOBAT.Data_Pengelolaan_Obat);
             // TODO: This line of code loads data into the 'toko_ObatDataSet.Data_Pengelolaan_Obat' table. You can move, or remove it, as needed.
-            this.data_Pengelolaan_ObatTableAdapter.Fill(this.toko_ObatDataSet.Data_Pengelolaan_Obat);
 
             nama_obat.Enabled = false;
             harga.Enabled = false;
@@ -86,34 +87,30 @@ namespace Toko_Obat
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Add.Enabled = true;
-            Create.Enabled = false;
-            Update.Enabled = true;
-            Delete.Enabled = true;
+            
         }
 
         private void Update_Click(object sender, EventArgs e)
         {
-            Add.Enabled = true;
-            Create.Enabled = true;
-            Update.Enabled = false;
-            Delete.Enabled = true;
+            
         }
 
         private void Delete_Click(object sender, EventArgs e)
         {
-            Add.Enabled = true;
-            Create.Enabled = true;
-            Update.Enabled = true;
-            Delete.Enabled = false;
+            
         }
 
         private void Add_Click(object sender, EventArgs e)
         {
-            Add.Enabled = false;
-            Create.Enabled = true;
-            Update.Enabled = false;
-            Delete.Enabled = false;
+            kode_pengelolaan.Text = "";
+            kode_obat.Text = "";
+            id_apoteker.Text = "";
+            nama_obat.Text = "";
+            jenis_obat.Text = "";
+            kadaluarsa.Text = "";
+            harga.Text = "";
+            efek_samping.Text = "";
+            cara_penggunaan.Text = "";
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -124,7 +121,7 @@ namespace Toko_Obat
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
             SqlConnection conn = new SqlConnection("Data Source=LAPTOP-91VJ4BQG;Initial Catalog=Toko_Obat;User ID=sa;Password=abianfikri");
-            SqlCommand query = new SqlCommand("Select * From Obat", conn);
+            SqlCommand query = new SqlCommand("Select * From Obat where Kode_Obat = '"+kode_obat.Text+"'", conn);
             SqlDataReader sdr;
 
             try
@@ -142,6 +139,29 @@ namespace Toko_Obat
             {
                 MessageBox.Show(et.Message);
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new Form1().Show();
+        }
+
+        private void Pembeli_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new Pembeli().Show();
+        }
+
+        private void Transaksi_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new Transaksi().Show();
+        }
+
+        private void Data_Pengelolaan_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

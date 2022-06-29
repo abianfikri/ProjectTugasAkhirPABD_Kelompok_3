@@ -81,11 +81,7 @@ namespace Toko_Obat
             MessageBox.Show("Berhasil hapus");
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            new Home_Apoteker().Show();
-        }
+       
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -152,6 +148,24 @@ namespace Toko_Obat
                 Id_Pembeli.Text = dataGridView1.Rows[e.RowIndex].Cells[0].FormattedValue.ToString();
                 Nama_Pembeli.Text = dataGridView1.Rows[e.RowIndex].Cells[1].FormattedValue.ToString();
             }
+        }
+
+        private void data_Pengelolaan_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new Data_Pengelolaan_Obat().Show();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            new Form1().Show();
+        }
+
+        private void Transaksi_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new Transaksi().Show();
         }
     }
 

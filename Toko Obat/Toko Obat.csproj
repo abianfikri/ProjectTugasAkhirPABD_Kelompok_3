@@ -64,18 +64,6 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Home Admin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Home Admin.Designer.cs">
-      <DependentUpon>Home Admin.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Home Apoteker.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Home Apoteker.Designer.cs">
-      <DependentUpon>Home Apoteker.cs</DependentUpon>
-    </Compile>
     <Compile Include="Login Admin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +95,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Toko_ObatDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Toko_ObatDataSetOBAT.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Toko_ObatDataSetOBAT.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Transaksi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,12 +114,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Home Admin.resx">
-      <DependentUpon>Home Admin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Home Apoteker.resx">
-      <DependentUpon>Home Apoteker.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login Admin.resx">
       <DependentUpon>Login Admin.cs</DependentUpon>
@@ -173,12 +160,32 @@
     <None Include="Toko_ObatDataSet.xss">
       <DependentUpon>Toko_ObatDataSet.xsd</DependentUpon>
     </None>
+    <None Include="Toko_ObatDataSetOBAT.xsc">
+      <DependentUpon>Toko_ObatDataSetOBAT.xsd</DependentUpon>
+    </None>
+    <None Include="Toko_ObatDataSetOBAT.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Toko_ObatDataSetOBAT.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Toko_ObatDataSetOBAT.xss">
+      <DependentUpon>Toko_ObatDataSetOBAT.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo Bulat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Admin Bulat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Apoteker.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

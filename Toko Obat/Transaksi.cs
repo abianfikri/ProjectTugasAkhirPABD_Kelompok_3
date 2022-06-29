@@ -194,10 +194,6 @@ namespace Toko_Obat
 
         private void Add_Click(object sender, EventArgs e)
         {
-            Add.Enabled = false;
-            Create.Enabled = true;
-            Update.Enabled = false;
-            Delete.Enabled = false;
             nama_obat.Enabled = false;
             harga.Enabled = false;
 
@@ -217,10 +213,7 @@ namespace Toko_Obat
         private void Create_Click(object sender, EventArgs e)
         {
             SqlConnection conn = new SqlConnection("Data Source=LAPTOP-91VJ4BQG;Initial Catalog=Toko_Obat;User ID=sa;Password=abianfikri");
-            Add.Enabled = true;
-            Create.Enabled = false;
-            Update.Enabled = true;
-            Delete.Enabled = true;
+            
 
             insertData();
             conn.Close();
@@ -228,10 +221,7 @@ namespace Toko_Obat
 
         private void Update_Click(object sender, EventArgs e)
         {
-            Add.Enabled = true;
-            Create.Enabled = true;
-            Update.Enabled = false;
-            Delete.Enabled = true;
+            
 
             updateData();
         }
@@ -260,6 +250,29 @@ namespace Toko_Obat
                 harga.Text = dataGridView1.Rows[e.RowIndex].Cells[6].FormattedValue.ToString();
                 totalHarga.Text = dataGridView1.Rows[e.RowIndex].Cells[7].FormattedValue.ToString();
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void data_pengelolaan_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new Data_Pengelolaan_Obat().Show();
+        }
+
+        private void Pembeli_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new Pembeli().Show();
+        }
+
+        private void logout_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new Form1().Show();
         }
     }
 }

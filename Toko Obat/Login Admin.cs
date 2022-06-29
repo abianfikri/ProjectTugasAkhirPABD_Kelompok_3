@@ -35,7 +35,7 @@ namespace Toko_Obat
             else if (user_admin.Text.Equals("Admin") && pass_admin.Text.Equals("Admin123"))
             {
                 this.Hide();
-                new Home_Admin().Show();
+                new Apoteker().Show();
             }
             else
             {
@@ -46,7 +46,7 @@ namespace Toko_Obat
 
         private void Login_Admin_Load(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

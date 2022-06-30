@@ -131,7 +131,7 @@ namespace Toko_Obat
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            new Login_Admin().Show();
+            new Form1().Show();
         }
     }
 }

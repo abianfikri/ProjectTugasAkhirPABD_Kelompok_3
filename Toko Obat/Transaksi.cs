@@ -222,7 +222,7 @@ namespace Toko_Obat
 
         private void qty_TextChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void Delete_Click(object sender, EventArgs e)
@@ -271,7 +271,7 @@ namespace Toko_Obat
 
         private void totalHarga_TextChanged(object sender, EventArgs e)
         {
-           
+            
         }
 
         private void hitung_Click(object sender, EventArgs e)
@@ -284,6 +284,26 @@ namespace Toko_Obat
             hasil = data1 * data2;
 
             totalHarga.Text = hasil.ToString();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            SqlConnection conn = new SqlConnection("Data Source=LAPTOP-91VJ4BQG;Initial Catalog=Toko_Obat;User ID=sa;Password=abianfikri");
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("SELECT * FROM Transaksi Where Nama_Obat LIKE  '%"+textBox1.Text+"%' OR Kode_Transaksi LIKE '%"+textBox1.Text+"%' " +
+                    "OR Id_Pembeli LIKE '%"+textBox1.Text+"%'", conn);
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                dataGridView1.DataSource = dt;
+                conn.Close();
+            }
+            catch(Exception t)
+            {
+                MessageBox.Show(t.Message);
+            }
         }
     }
 }

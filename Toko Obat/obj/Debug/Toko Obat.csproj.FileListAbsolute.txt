@@ -108,3 +108,20 @@ D:\TA PABD\Kelompok 3_UAS_PABD\UAS_PABD\Toko Obat\obj\Debug\Toko Obat.csproj.Gen
 D:\TA PABD\Kelompok 3_UAS_PABD\UAS_PABD\Toko Obat\obj\Debug\Toko Obat.csproj.CoreCompileInputs.cache
 D:\TA PABD\Kelompok 3_UAS_PABD\UAS_PABD\Toko Obat\obj\Debug\Toko Obat.exe
 D:\TA PABD\Kelompok 3_UAS_PABD\UAS_PABD\Toko Obat\obj\Debug\Toko Obat.pdb
+D:\TA PABD\Kelompok 3_UAS_PABD\ProjectTugasAkhirPABD_Kelompok_3\Toko Obat\bin\Debug\Toko Obat.exe.config
+D:\TA PABD\Kelompok 3_UAS_PABD\ProjectTugasAkhirPABD_Kelompok_3\Toko Obat\bin\Debug\Toko Obat.exe
+D:\TA PABD\Kelompok 3_UAS_PABD\ProjectTugasAkhirPABD_Kelompok_3\Toko Obat\bin\Debug\Toko Obat.pdb
+D:\TA PABD\Kelompok 3_UAS_PABD\ProjectTugasAkhirPABD_Kelompok_3\Toko Obat\obj\Debug\Toko Obat.csproj.AssemblyReference.cache
+D:\TA PABD\Kelompok 3_UAS_PABD\ProjectTugasAkhirPABD_Kelompok_3\Toko Obat\obj\Debug\Toko_Obat.Apoteker.resources
+D:\TA PABD\Kelompok 3_UAS_PABD\ProjectTugasAkhirPABD_Kelompok_3\Toko Obat\obj\Debug\Toko_Obat.Data_Pengelolaan_Obat.resources
+D:\TA PABD\Kelompok 3_UAS_PABD\ProjectTugasAkhirPABD_Kelompok_3\Toko Obat\obj\Debug\Toko_Obat.Form1.resources
+D:\TA PABD\Kelompok 3_UAS_PABD\ProjectTugasAkhirPABD_Kelompok_3\Toko Obat\obj\Debug\Toko_Obat.Login_Admin.resources
+D:\TA PABD\Kelompok 3_UAS_PABD\ProjectTugasAkhirPABD_Kelompok_3\Toko Obat\obj\Debug\Toko_Obat.Login_Apoteker.resources
+D:\TA PABD\Kelompok 3_UAS_PABD\ProjectTugasAkhirPABD_Kelompok_3\Toko Obat\obj\Debug\Toko_Obat.Obat.resources
+D:\TA PABD\Kelompok 3_UAS_PABD\ProjectTugasAkhirPABD_Kelompok_3\Toko Obat\obj\Debug\Toko_Obat.Pembeli.resources
+D:\TA PABD\Kelompok 3_UAS_PABD\ProjectTugasAkhirPABD_Kelompok_3\Toko Obat\obj\Debug\Toko_Obat.Properties.Resources.resources
+D:\TA PABD\Kelompok 3_UAS_PABD\ProjectTugasAkhirPABD_Kelompok_3\Toko Obat\obj\Debug\Toko_Obat.Transaksi.resources
+D:\TA PABD\Kelompok 3_UAS_PABD\ProjectTugasAkhirPABD_Kelompok_3\Toko Obat\obj\Debug\Toko Obat.csproj.GenerateResource.cache
+D:\TA PABD\Kelompok 3_UAS_PABD\ProjectTugasAkhirPABD_Kelompok_3\Toko Obat\obj\Debug\Toko Obat.csproj.CoreCompileInputs.cache
+D:\TA PABD\Kelompok 3_UAS_PABD\ProjectTugasAkhirPABD_Kelompok_3\Toko Obat\obj\Debug\Toko Obat.exe
+D:\TA PABD\Kelompok 3_UAS_PABD\ProjectTugasAkhirPABD_Kelompok_3\Toko Obat\obj\Debug\Toko Obat.pdb

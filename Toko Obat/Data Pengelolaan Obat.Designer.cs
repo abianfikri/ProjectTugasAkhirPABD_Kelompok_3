@@ -75,6 +75,8 @@ namespace Toko_Obat
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.kadaluarsa = new System.Windows.Forms.DateTimePicker();
             this.data_Pengelolaan_ObatTableAdapter1 = new Toko_Obat.Toko_ObatDataSetOBATTableAdapters.Data_Pengelolaan_ObatTableAdapter();
+            this.label11 = new System.Windows.Forms.Label();
+            this.search = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataPengelolaanObatBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.toko_ObatDataSetOBAT)).BeginInit();
@@ -247,7 +249,7 @@ namespace Toko_Obat
             // 
             // Add
             // 
-            this.Add.Location = new System.Drawing.Point(461, 275);
+            this.Add.Location = new System.Drawing.Point(283, 275);
             this.Add.Name = "Add";
             this.Add.Size = new System.Drawing.Size(75, 40);
             this.Add.TabIndex = 11;
@@ -257,7 +259,7 @@ namespace Toko_Obat
             // 
             // Create
             // 
-            this.Create.Location = new System.Drawing.Point(617, 275);
+            this.Create.Location = new System.Drawing.Point(395, 275);
             this.Create.Name = "Create";
             this.Create.Size = new System.Drawing.Size(75, 40);
             this.Create.TabIndex = 12;
@@ -267,7 +269,7 @@ namespace Toko_Obat
             // 
             // Update
             // 
-            this.Update.Location = new System.Drawing.Point(764, 275);
+            this.Update.Location = new System.Drawing.Point(492, 275);
             this.Update.Name = "Update";
             this.Update.Size = new System.Drawing.Size(75, 40);
             this.Update.TabIndex = 13;
@@ -277,7 +279,7 @@ namespace Toko_Obat
             // 
             // Delete
             // 
-            this.Delete.Location = new System.Drawing.Point(901, 275);
+            this.Delete.Location = new System.Drawing.Point(580, 275);
             this.Delete.Name = "Delete";
             this.Delete.Size = new System.Drawing.Size(75, 40);
             this.Delete.TabIndex = 14;
@@ -463,12 +465,31 @@ namespace Toko_Obat
             // 
             this.data_Pengelolaan_ObatTableAdapter1.ClearBeforeFill = true;
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(804, 263);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(53, 17);
+            this.label11.TabIndex = 38;
+            this.label11.Text = "Search";
+            // 
+            // search
+            // 
+            this.search.Location = new System.Drawing.Point(807, 286);
+            this.search.Name = "search";
+            this.search.Size = new System.Drawing.Size(202, 22);
+            this.search.TabIndex = 37;
+            this.search.TextChanged += new System.EventHandler(this.search_TextChanged);
+            // 
             // Data_Pengelolaan_Obat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGreen;
             this.ClientSize = new System.Drawing.Size(1231, 509);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.search);
             this.Controls.Add(this.kadaluarsa);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label10);
@@ -557,5 +578,7 @@ namespace Toko_Obat
         private System.Windows.Forms.BindingSource dataPengelolaanObatBindingSource1;
         private Toko_ObatDataSetOBATTableAdapters.Data_Pengelolaan_ObatTableAdapter data_Pengelolaan_ObatTableAdapter1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox search;
     }
 }

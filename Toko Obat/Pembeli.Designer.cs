@@ -46,11 +46,13 @@ namespace Toko_Obat
             this.Delete = new System.Windows.Forms.Button();
             this.pembeliTableAdapter = new Toko_Obat.Toko_ObatDataSetTableAdapters.PembeliTableAdapter();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.data_Pengelolaan = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.Transaksi = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.data_Pengelolaan = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.search = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pembeliBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.toko_ObatDataSet)).BeginInit();
@@ -60,7 +62,7 @@ namespace Toko_Obat
             // 
             // Id_Pembeli
             // 
-            this.Id_Pembeli.Location = new System.Drawing.Point(431, 125);
+            this.Id_Pembeli.Location = new System.Drawing.Point(432, 94);
             this.Id_Pembeli.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Id_Pembeli.Name = "Id_Pembeli";
             this.Id_Pembeli.Size = new System.Drawing.Size(159, 22);
@@ -80,7 +82,7 @@ namespace Toko_Obat
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(326, 125);
+            this.label2.Location = new System.Drawing.Point(327, 94);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(75, 17);
             this.label2.TabIndex = 2;
@@ -89,7 +91,7 @@ namespace Toko_Obat
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(326, 185);
+            this.label3.Location = new System.Drawing.Point(327, 154);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(99, 17);
             this.label3.TabIndex = 4;
@@ -97,7 +99,7 @@ namespace Toko_Obat
             // 
             // Nama_Pembeli
             // 
-            this.Nama_Pembeli.Location = new System.Drawing.Point(431, 182);
+            this.Nama_Pembeli.Location = new System.Drawing.Point(432, 151);
             this.Nama_Pembeli.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Nama_Pembeli.Name = "Nama_Pembeli";
             this.Nama_Pembeli.Size = new System.Drawing.Size(159, 22);
@@ -206,6 +208,16 @@ namespace Toko_Obat
             this.panel1.Size = new System.Drawing.Size(245, 481);
             this.panel1.TabIndex = 27;
             // 
+            // data_Pengelolaan
+            // 
+            this.data_Pengelolaan.Location = new System.Drawing.Point(12, 167);
+            this.data_Pengelolaan.Name = "data_Pengelolaan";
+            this.data_Pengelolaan.Size = new System.Drawing.Size(206, 39);
+            this.data_Pengelolaan.TabIndex = 15;
+            this.data_Pengelolaan.Text = "Data Pengelolaan Obat";
+            this.data_Pengelolaan.UseVisualStyleBackColor = true;
+            this.data_Pengelolaan.Click += new System.EventHandler(this.data_Pengelolaan_Click);
+            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Red;
@@ -216,6 +228,16 @@ namespace Toko_Obat
             this.button1.Text = "Logout";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Gray;
+            this.button2.Location = new System.Drawing.Point(12, 226);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(206, 39);
+            this.button2.TabIndex = 13;
+            this.button2.Text = "Pembeli";
+            this.button2.UseVisualStyleBackColor = false;
             // 
             // Transaksi
             // 
@@ -237,25 +259,22 @@ namespace Toko_Obat
             this.pictureBox2.TabIndex = 10;
             this.pictureBox2.TabStop = false;
             // 
-            // button2
+            // label9
             // 
-            this.button2.BackColor = System.Drawing.Color.Gray;
-            this.button2.Location = new System.Drawing.Point(12, 226);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(206, 39);
-            this.button2.TabIndex = 13;
-            this.button2.Text = "Pembeli";
-            this.button2.UseVisualStyleBackColor = false;
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(303, 233);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(53, 17);
+            this.label9.TabIndex = 34;
+            this.label9.Text = "Search";
             // 
-            // data_Pengelolaan
+            // search
             // 
-            this.data_Pengelolaan.Location = new System.Drawing.Point(12, 167);
-            this.data_Pengelolaan.Name = "data_Pengelolaan";
-            this.data_Pengelolaan.Size = new System.Drawing.Size(206, 39);
-            this.data_Pengelolaan.TabIndex = 15;
-            this.data_Pengelolaan.Text = "Data Pengelolaan Obat";
-            this.data_Pengelolaan.UseVisualStyleBackColor = true;
-            this.data_Pengelolaan.Click += new System.EventHandler(this.data_Pengelolaan_Click);
+            this.search.Location = new System.Drawing.Point(306, 256);
+            this.search.Name = "search";
+            this.search.Size = new System.Drawing.Size(186, 22);
+            this.search.TabIndex = 33;
+            this.search.TextChanged += new System.EventHandler(this.search_TextChanged);
             // 
             // Pembeli
             // 
@@ -263,6 +282,8 @@ namespace Toko_Obat
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGreen;
             this.ClientSize = new System.Drawing.Size(1021, 481);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.search);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.Delete);
             this.Controls.Add(this.Update);
@@ -312,5 +333,7 @@ namespace Toko_Obat
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button data_Pengelolaan;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox search;
     }
 }

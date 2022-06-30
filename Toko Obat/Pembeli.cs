@@ -155,6 +155,25 @@ namespace Toko_Obat
             this.Hide();
             new Transaksi().Show();
         }
+
+        private void search_TextChanged(object sender, EventArgs e)
+        {
+            SqlConnection conn = new SqlConnection("Data Source=LAPTOP-91VJ4BQG;Initial Catalog=Toko_Obat;User ID=sa;Password=abianfikri");
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("SELECT * FROM Pembeli Where Nama_Pembeli LIKE  '%" + search.Text + "%' OR Id_Pembeli LIKE '%" + search.Text + "%' ", conn);
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                dataGridView1.DataSource = dt;
+                conn.Close();
+            }
+            catch (Exception t)
+            {
+                MessageBox.Show(t.Message);
+            }
+        }
     }
 
 }

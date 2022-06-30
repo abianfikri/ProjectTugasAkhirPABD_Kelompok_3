@@ -133,5 +133,30 @@ namespace Toko_Obat
             this.Hide();
             new Form1().Show();
         }
+
+        private void search_TextChanged(object sender, EventArgs e)
+        {
+            SqlConnection conn = new SqlConnection("Data Source=LAPTOP-91VJ4BQG;Initial Catalog=Toko_Obat;User ID=sa;Password=abianfikri");
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("SELECT * FROM Obat Where Nama_Obat LIKE  '%" + search.Text + "%' OR Kode_Obat LIKE '%" + search.Text + "%' " +
+                    "OR Jenis_Obat LIKE '%" + search.Text + "%'", conn);
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                dataGridView1.DataSource = dt;
+                conn.Close();
+            }
+            catch (Exception t)
+            {
+                MessageBox.Show(t.Message);
+            }
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

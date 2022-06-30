@@ -249,5 +249,24 @@ namespace Toko_Obat
                 cara_penggunaan.Text = dataGridView1.Rows[e.RowIndex].Cells[8].FormattedValue.ToString();
             }
         }
+
+        private void search_TextChanged(object sender, EventArgs e)
+        {
+            SqlConnection conn = new SqlConnection("Data Source=LAPTOP-91VJ4BQG;Initial Catalog=Toko_Obat;User ID=sa;Password=abianfikri");
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("SELECT * FROM Data_Pengelolaan_Obat Where Nama_Obat LIKE  '%" + search.Text + "%' OR Kode_Pengelolaan LIKE '%" + search.Text + "%'  OR Id_Apoteker LIKE '%" + search.Text + "%' ", conn);
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                dataGridView1.DataSource = dt;
+                conn.Close();
+            }
+            catch (Exception t)
+            {
+                MessageBox.Show(t.Message);
+            }
+        }
     }
 }

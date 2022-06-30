@@ -27,9 +27,8 @@ namespace Toko_Obat
             try
             {
                 conn.Open();
-                SqlCommand insert = new SqlCommand("INSERT INTO Transaksi (Kode_Transaksi, Id_Pembeli, Kode_Obat, Nama_Obat, Tgl_Transaksi, Qty, Harga_Satuan, Total_Harga) VALUES" +
-                    "('" + kode_transaksi.Text + "', '" + id_pembeli.Text + "', '" + kode_obat.Text + "', '" + nama_obat.Text + "', '" + tgl_transaksi.Value + "', '" + qty.Text + "', '" + harga.Text + "'," +
-                    "'" + totalHarga.Text + "')", conn);
+                SqlCommand insert = new SqlCommand("EXEC insertTransaksi '" + kode_transaksi.Text + "', '" + id_pembeli.Text + "', '" + kode_obat.Text + "', '" + nama_obat.Text + "', " +
+                    "'" + tgl_transaksi.Value + "', '" + qty.Text + "', '" + harga.Text + "','" + totalHarga.Text + "'", conn);
                 insert.ExecuteNonQuery();
                 conn.Close();
                 getData();
@@ -68,8 +67,8 @@ namespace Toko_Obat
             try
             {
                 conn.Open();
-                SqlCommand query = new SqlCommand("Update Transaksi set Kode_Transaksi = '" + kode_transaksi.Text + "', Id_Pembeli = '" + id_pembeli.Text + "', Kode_Obat = '" + kode_obat.Text + "', Nama_Obat = '" + nama_obat.Text + "', " +
-                    "Tgl_Transaksi = '" + tgl_transaksi.Value + "', Qty = '" + qty.Text + "', Harga_Satuan = '" + harga.Text + "', Total_Harga = '" + totalHarga.Text + "' WHERE Kode_Transaksi = '" + kode_transaksi.Text + "'", conn);
+                SqlCommand query = new SqlCommand("EXEC updateTransaksi '" + kode_transaksi.Text + "', '" + id_pembeli.Text + "', '" + kode_obat.Text + "','" + nama_obat.Text + "', " +
+                    " '" + tgl_transaksi.Value + "', '" + qty.Text + "',  '" + harga.Text + "', '" + totalHarga.Text + "' ", conn);
                 query.ExecuteNonQuery();
                 conn.Close();
                 getData();

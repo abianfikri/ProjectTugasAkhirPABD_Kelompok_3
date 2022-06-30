@@ -74,17 +74,9 @@ namespace Toko_Obat
             try
             {
                 koneksi.Open();
-                SqlCommand cmd = new SqlCommand("INSERT INTO Data_Pengelolaan_Obat Values (@Kode_Pengelolaan, @Id_Apoteker, @Kode_Obat, @Nama_Obat, @Jenis_Obat, " +
-                "@Tgl_Kadaluwarsa, @Harga, @Efek_Samping, @Cara_Penggunaan)", koneksi);
-                cmd.Parameters.AddWithValue("@Kode_Pengelolaan", kode_pengelolaan.Text);
-                cmd.Parameters.AddWithValue("@Id_Apoteker", id_apoteker.Text);
-                cmd.Parameters.AddWithValue("@Kode_Obat", kode_obat.Text);
-                cmd.Parameters.AddWithValue("@Nama_Obat", nama_obat.Text);
-                cmd.Parameters.AddWithValue("@Jenis_Obat", jenis_obat.Text);
-                cmd.Parameters.AddWithValue("@Tgl_Kadaluwarsa", kadaluarsa.Value);
-                cmd.Parameters.AddWithValue("@Harga", harga.Text);
-                cmd.Parameters.AddWithValue("@Efek_Samping", efek_samping.Text);
-                cmd.Parameters.AddWithValue("@Cara_Penggunaan", cara_penggunaan.Text);
+                SqlCommand cmd = new SqlCommand("EXEC insertData_Pengelolaan_Obat  '"+kode_pengelolaan.Text+"', '"+id_apoteker.Text+"', '"+kode_obat.Text+"', '"+nama_obat.Text+"', '"+jenis_obat.Text+"', " +
+                "'"+kadaluarsa.Value+"', '"+harga.Text+"', '"+efek_samping.Text+"', '"+cara_penggunaan.Text+"'", koneksi);
+      
                 cmd.ExecuteNonQuery();
                 getData();
                 koneksi.Close();
@@ -115,10 +107,9 @@ namespace Toko_Obat
             try
             {
                 koneksi.Open();
-                SqlCommand cmd = new SqlCommand("UPDATE Data_Pengelolaan_Obat set Kode_Pengelolaan = '" + kode_pengelolaan.Text + "', Id_Apoteker = '" + id_apoteker.Text + "'," +
-                    "Kode_Obat = '" + kode_obat.Text + "', Nama_Obat = '" + nama_obat.Text + "', Jenis_Obat = '" + jenis_obat.Text + "', Tgl_Kadaluwarsa = '" + kadaluarsa.Value + "'," +
-                    "Harga = '" + harga.Text + "', Efek_Samping = '" + efek_samping.Text + "', Cara_Penggunaan = '" + cara_penggunaan.Text + "' " +
-                    "WHERE Kode_Pengelolaan = '" + kode_pengelolaan.Text + "' ", koneksi);
+                SqlCommand cmd = new SqlCommand("EXEC updateData_Pengelolaan_Obat '" + kode_pengelolaan.Text + "', '" + id_apoteker.Text + "'," +
+                    "'" + kode_obat.Text + "', '" + nama_obat.Text + "', '" + jenis_obat.Text + "', '" + kadaluarsa.Value + "'," +
+                    " '" + harga.Text + "', '" + efek_samping.Text + "', '" + cara_penggunaan.Text + "'", koneksi);
                 cmd.ExecuteNonQuery();
                 koneksi.Close();
                 getData();

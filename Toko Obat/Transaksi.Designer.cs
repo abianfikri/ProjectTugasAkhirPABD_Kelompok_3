@@ -64,11 +64,12 @@ namespace Toko_Obat
             this.nama_obat = new System.Windows.Forms.TextBox();
             this.transaksiTableAdapter = new Toko_Obat.Toko_ObatDataSetTableAdapters.TransaksiTableAdapter();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.data_pengelolaan = new System.Windows.Forms.Button();
             this.logout = new System.Windows.Forms.Button();
             this.Pembeli = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.data_pengelolaan = new System.Windows.Forms.Button();
+            this.hitung = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.transaksiBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.toko_ObatDataSet)).BeginInit();
@@ -112,7 +113,7 @@ namespace Toko_Obat
             // 
             // qty
             // 
-            this.qty.Location = new System.Drawing.Point(810, 120);
+            this.qty.Location = new System.Drawing.Point(810, 125);
             this.qty.Name = "qty";
             this.qty.Size = new System.Drawing.Size(121, 22);
             this.qty.TabIndex = 5;
@@ -120,17 +121,18 @@ namespace Toko_Obat
             // 
             // harga
             // 
-            this.harga.Location = new System.Drawing.Point(810, 167);
+            this.harga.Location = new System.Drawing.Point(1048, 122);
             this.harga.Name = "harga";
             this.harga.Size = new System.Drawing.Size(121, 22);
             this.harga.TabIndex = 6;
             // 
             // totalHarga
             // 
-            this.totalHarga.Location = new System.Drawing.Point(810, 209);
+            this.totalHarga.Location = new System.Drawing.Point(810, 207);
             this.totalHarga.Name = "totalHarga";
             this.totalHarga.Size = new System.Drawing.Size(121, 22);
             this.totalHarga.TabIndex = 7;
+            this.totalHarga.TextChanged += new System.EventHandler(this.totalHarga_TextChanged);
             // 
             // label2
             // 
@@ -172,7 +174,7 @@ namespace Toko_Obat
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(697, 125);
+            this.label6.Location = new System.Drawing.Point(698, 125);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(30, 17);
             this.label6.TabIndex = 13;
@@ -181,7 +183,7 @@ namespace Toko_Obat
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(697, 167);
+            this.label7.Location = new System.Drawing.Point(946, 125);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(96, 17);
             this.label7.TabIndex = 14;
@@ -190,7 +192,7 @@ namespace Toko_Obat
             // label
             // 
             this.label.AutoSize = true;
-            this.label.Location = new System.Drawing.Point(698, 210);
+            this.label.Location = new System.Drawing.Point(697, 210);
             this.label.Name = "label";
             this.label.Size = new System.Drawing.Size(83, 17);
             this.label.TabIndex = 15;
@@ -327,7 +329,7 @@ namespace Toko_Obat
             // 
             // tgl_transaksi
             // 
-            this.tgl_transaksi.Location = new System.Drawing.Point(810, 87);
+            this.tgl_transaksi.Location = new System.Drawing.Point(810, 82);
             this.tgl_transaksi.Name = "tgl_transaksi";
             this.tgl_transaksi.Size = new System.Drawing.Size(237, 22);
             this.tgl_transaksi.TabIndex = 21;
@@ -364,6 +366,16 @@ namespace Toko_Obat
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(245, 546);
             this.panel1.TabIndex = 27;
+            // 
+            // data_pengelolaan
+            // 
+            this.data_pengelolaan.Location = new System.Drawing.Point(12, 171);
+            this.data_pengelolaan.Name = "data_pengelolaan";
+            this.data_pengelolaan.Size = new System.Drawing.Size(206, 39);
+            this.data_pengelolaan.TabIndex = 15;
+            this.data_pengelolaan.Text = "Data Pengelolaan Obat";
+            this.data_pengelolaan.UseVisualStyleBackColor = true;
+            this.data_pengelolaan.Click += new System.EventHandler(this.data_pengelolaan_Click);
             // 
             // logout
             // 
@@ -407,15 +419,15 @@ namespace Toko_Obat
             this.pictureBox2.TabIndex = 10;
             this.pictureBox2.TabStop = false;
             // 
-            // data_pengelolaan
+            // hitung
             // 
-            this.data_pengelolaan.Location = new System.Drawing.Point(12, 171);
-            this.data_pengelolaan.Name = "data_pengelolaan";
-            this.data_pengelolaan.Size = new System.Drawing.Size(206, 39);
-            this.data_pengelolaan.TabIndex = 15;
-            this.data_pengelolaan.Text = "Data Pengelolaan Obat";
-            this.data_pengelolaan.UseVisualStyleBackColor = true;
-            this.data_pengelolaan.Click += new System.EventHandler(this.data_pengelolaan_Click);
+            this.hitung.Location = new System.Drawing.Point(810, 162);
+            this.hitung.Name = "hitung";
+            this.hitung.Size = new System.Drawing.Size(75, 29);
+            this.hitung.TabIndex = 28;
+            this.hitung.Text = "Hitung";
+            this.hitung.UseVisualStyleBackColor = true;
+            this.hitung.Click += new System.EventHandler(this.hitung_Click);
             // 
             // Transaksi
             // 
@@ -423,6 +435,7 @@ namespace Toko_Obat
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGreen;
             this.ClientSize = new System.Drawing.Size(1300, 548);
+            this.Controls.Add(this.hitung);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.nama_obat);
@@ -501,5 +514,6 @@ namespace Toko_Obat
         private System.Windows.Forms.Button Pembeli;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button hitung;
     }
 }

@@ -157,6 +157,7 @@ namespace Toko_Obat
             this.transaksiTableAdapter.Fill(this.toko_ObatDataSet.Transaksi);
             nama_obat.Enabled = false;
             harga.Enabled = false;
+            totalHarga.Enabled = false;
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -267,6 +268,23 @@ namespace Toko_Obat
         {
             this.Hide();
             new Form1().Show();
+        }
+
+        private void totalHarga_TextChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void hitung_Click(object sender, EventArgs e)
+        {
+            int data1, data2, hasil;
+
+            data1 = int.Parse(qty.Text);
+            data2 = int.Parse(harga.Text);
+
+            hasil = data1 * data2;
+
+            totalHarga.Text = hasil.ToString();
         }
     }
 }

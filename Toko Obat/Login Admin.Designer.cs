@@ -32,13 +32,13 @@ namespace Toko_Obat
             this.lg_Aptoker = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.lg_Admin = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pass_admin = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.user_admin = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.lg_Admin = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pass_admin = new System.Windows.Forms.TextBox();
+            this.user_admin = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
@@ -68,7 +68,7 @@ namespace Toko_Obat
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.SaddleBrown;
+            this.panel2.BackColor = System.Drawing.Color.DarkTurquoise;
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.lg_Admin);
@@ -82,43 +82,16 @@ namespace Toko_Obat
             this.panel2.Size = new System.Drawing.Size(615, 223);
             this.panel2.TabIndex = 12;
             // 
-            // lg_Admin
+            // label4
             // 
-            this.lg_Admin.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lg_Admin.BackColor = System.Drawing.Color.Coral;
-            this.lg_Admin.Location = new System.Drawing.Point(59, 84);
-            this.lg_Admin.Name = "lg_Admin";
-            this.lg_Admin.Size = new System.Drawing.Size(134, 33);
-            this.lg_Admin.TabIndex = 0;
-            this.lg_Admin.Text = "Admin";
-            this.lg_Admin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(362, 40);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 17);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Username";
-            // 
-            // pass_admin
-            // 
-            this.pass_admin.Location = new System.Drawing.Point(365, 107);
-            this.pass_admin.Name = "pass_admin";
-            this.pass_admin.Size = new System.Drawing.Size(184, 22);
-            this.pass_admin.TabIndex = 3;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(362, 85);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 17);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Password";
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(57, 11);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(138, 25);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Login Sebagai";
             // 
             // button1
             // 
@@ -130,6 +103,34 @@ namespace Toko_Obat
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // lg_Admin
+            // 
+            this.lg_Admin.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lg_Admin.BackColor = System.Drawing.Color.Coral;
+            this.lg_Admin.Location = new System.Drawing.Point(59, 84);
+            this.lg_Admin.Name = "lg_Admin";
+            this.lg_Admin.Size = new System.Drawing.Size(134, 33);
+            this.lg_Admin.TabIndex = 0;
+            this.lg_Admin.Text = "Admin";
+            this.lg_Admin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label3.Location = new System.Drawing.Point(362, 85);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(69, 17);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Password";
+            // 
+            // pass_admin
+            // 
+            this.pass_admin.Location = new System.Drawing.Point(365, 107);
+            this.pass_admin.Name = "pass_admin";
+            this.pass_admin.Size = new System.Drawing.Size(184, 22);
+            this.pass_admin.TabIndex = 3;
+            // 
             // user_admin
             // 
             this.user_admin.Location = new System.Drawing.Point(365, 60);
@@ -137,16 +138,15 @@ namespace Toko_Obat
             this.user_admin.Size = new System.Drawing.Size(184, 22);
             this.user_admin.TabIndex = 1;
             // 
-            // label4
+            // label2
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(57, 11);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(138, 25);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Login Sebagai";
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Location = new System.Drawing.Point(362, 40);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(73, 17);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Username";
             // 
             // label1
             // 

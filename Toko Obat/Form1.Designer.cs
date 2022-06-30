@@ -30,23 +30,23 @@ namespace Toko_Obat
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lg_Aptoker = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.lg_Admin = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.lg_Admin = new System.Windows.Forms.Label();
-            this.lg_Aptoker = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.SaddleBrown;
+            this.panel1.BackColor = System.Drawing.Color.DarkTurquoise;
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.lg_Aptoker);
             this.panel1.Controls.Add(this.button1);
@@ -60,6 +60,29 @@ namespace Toko_Obat
             this.panel1.Size = new System.Drawing.Size(615, 221);
             this.panel1.TabIndex = 1;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(97, 15);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(138, 25);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Login Sebagai";
+            // 
+            // lg_Aptoker
+            // 
+            this.lg_Aptoker.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lg_Aptoker.BackColor = System.Drawing.Color.PeachPuff;
+            this.lg_Aptoker.Location = new System.Drawing.Point(99, 136);
+            this.lg_Aptoker.Name = "lg_Aptoker";
+            this.lg_Aptoker.Size = new System.Drawing.Size(134, 33);
+            this.lg_Aptoker.TabIndex = 0;
+            this.lg_Aptoker.Text = "Apoteker";
+            this.lg_Aptoker.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lg_Aptoker.Click += new System.EventHandler(this.lg_Aptoker_Click);
+            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(356, 158);
@@ -68,6 +91,18 @@ namespace Toko_Obat
             this.button1.TabIndex = 5;
             this.button1.Text = "Login";
             this.button1.UseVisualStyleBackColor = true;
+            // 
+            // lg_Admin
+            // 
+            this.lg_Admin.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lg_Admin.BackColor = System.Drawing.Color.PeachPuff;
+            this.lg_Admin.Location = new System.Drawing.Point(99, 78);
+            this.lg_Admin.Name = "lg_Admin";
+            this.lg_Admin.Size = new System.Drawing.Size(134, 33);
+            this.lg_Admin.TabIndex = 0;
+            this.lg_Admin.Text = "Admin";
+            this.lg_Admin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lg_Admin.Click += new System.EventHandler(this.lg_Admin_Click);
             // 
             // label3
             // 
@@ -104,30 +139,6 @@ namespace Toko_Obat
             this.textBox1.Size = new System.Drawing.Size(184, 22);
             this.textBox1.TabIndex = 1;
             // 
-            // lg_Admin
-            // 
-            this.lg_Admin.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lg_Admin.BackColor = System.Drawing.Color.PeachPuff;
-            this.lg_Admin.Location = new System.Drawing.Point(99, 78);
-            this.lg_Admin.Name = "lg_Admin";
-            this.lg_Admin.Size = new System.Drawing.Size(134, 33);
-            this.lg_Admin.TabIndex = 0;
-            this.lg_Admin.Text = "Admin";
-            this.lg_Admin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lg_Admin.Click += new System.EventHandler(this.lg_Admin_Click);
-            // 
-            // lg_Aptoker
-            // 
-            this.lg_Aptoker.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lg_Aptoker.BackColor = System.Drawing.Color.PeachPuff;
-            this.lg_Aptoker.Location = new System.Drawing.Point(99, 136);
-            this.lg_Aptoker.Name = "lg_Aptoker";
-            this.lg_Aptoker.Size = new System.Drawing.Size(134, 33);
-            this.lg_Aptoker.TabIndex = 0;
-            this.lg_Aptoker.Text = "Apoteker";
-            this.lg_Aptoker.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lg_Aptoker.Click += new System.EventHandler(this.lg_Aptoker_Click);
-            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Toko_Obat.Properties.Resources.Logo_Bulat;
@@ -147,17 +158,6 @@ namespace Toko_Obat
             this.label1.Size = new System.Drawing.Size(415, 26);
             this.label1.TabIndex = 11;
             this.label1.Text = "Selamat Datang Di Aplikasi Apotek Sehat";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(97, 15);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(138, 25);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Login Sebagai";
             // 
             // Form1
             // 

@@ -37,9 +37,9 @@ namespace Toko_Obat
             this.lg_Admin = new System.Windows.Forms.Label();
             this.lg_Aptoker = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -114,7 +114,7 @@ namespace Toko_Obat
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.SaddleBrown;
+            this.panel2.BackColor = System.Drawing.Color.DarkTurquoise;
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.lg_Admin);
@@ -127,6 +127,17 @@ namespace Toko_Obat
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(615, 223);
             this.panel2.TabIndex = 13;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(42, 12);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(138, 25);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Login Sebagai";
             // 
             // label1
             // 
@@ -147,17 +158,6 @@ namespace Toko_Obat
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 14;
             this.pictureBox2.TabStop = false;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(42, 12);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(138, 25);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Login Sebagai";
             // 
             // Login_Apoteker
             // 

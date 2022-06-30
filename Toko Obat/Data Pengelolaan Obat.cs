@@ -66,6 +66,88 @@ namespace Toko_Obat
 
         }
 
+        /*Insert Data*/
+        void insertData()
+        {
+            SqlConnection koneksi = new SqlConnection("Data Source=LAPTOP-91VJ4BQG;Initial Catalog=Toko_Obat;User ID=sa;Password=abianfikri");
+
+            try
+            {
+                koneksi.Open();
+                SqlCommand cmd = new SqlCommand("INSERT INTO Data_Pengelolaan_Obat Values (@Kode_Pengelolaan, @Id_Apoteker, @Kode_Obat, @Nama_Obat, @Jenis_Obat, " +
+                "@Tgl_Kadaluwarsa, @Harga, @Efek_Samping, @Cara_Penggunaan)", koneksi);
+                cmd.Parameters.AddWithValue("@Kode_Pengelolaan", kode_pengelolaan.Text);
+                cmd.Parameters.AddWithValue("@Id_Apoteker", id_apoteker.Text);
+                cmd.Parameters.AddWithValue("@Kode_Obat", kode_obat.Text);
+                cmd.Parameters.AddWithValue("@Nama_Obat", nama_obat.Text);
+                cmd.Parameters.AddWithValue("@Jenis_Obat", jenis_obat.Text);
+                cmd.Parameters.AddWithValue("@Tgl_Kadaluwarsa", kadaluarsa.Value);
+                cmd.Parameters.AddWithValue("@Harga", harga.Text);
+                cmd.Parameters.AddWithValue("@Efek_Samping", efek_samping.Text);
+                cmd.Parameters.AddWithValue("@Cara_Penggunaan", cara_penggunaan.Text);
+                cmd.ExecuteNonQuery();
+                getData();
+                koneksi.Close();
+                MessageBox.Show("Data Berhasil Disimpan");
+            }
+            catch(Exception p)
+            {
+                MessageBox.Show(p.Message);
+            }
+        }
+
+        void getData()
+        {
+            SqlConnection koneksi = new SqlConnection("Data Source=LAPTOP-91VJ4BQG;Initial Catalog=Toko_Obat;User ID=sa;Password=abianfikri");
+
+            koneksi.Open();
+            SqlCommand cmd = new SqlCommand("SELECT * FROM Data_Pengelolaan_Obat", koneksi);
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            dataGridView1.DataSource = dt;
+        }
+
+        void updateData()
+        {
+            SqlConnection koneksi = new SqlConnection("Data Source=LAPTOP-91VJ4BQG;Initial Catalog=Toko_Obat;User ID=sa;Password=abianfikri");
+
+            try
+            {
+                koneksi.Open();
+                SqlCommand cmd = new SqlCommand("UPDATE Data_Pengelolaan_Obat set Kode_Pengelolaan = '" + kode_pengelolaan.Text + "', Id_Apoteker = '" + id_apoteker.Text + "'," +
+                    "Kode_Obat = '" + kode_obat.Text + "', Nama_Obat = '" + nama_obat.Text + "', Jenis_Obat = '" + jenis_obat.Text + "', Tgl_Kadaluwarsa = '" + kadaluarsa.Value + "'," +
+                    "Harga = '" + harga.Text + "', Efek_Samping = '" + efek_samping.Text + "', Cara_Penggunaan = '" + cara_penggunaan.Text + "' " +
+                    "WHERE Kode_Pengelolaan = '" + kode_pengelolaan.Text + "' ", koneksi);
+                cmd.ExecuteNonQuery();
+                koneksi.Close();
+                getData();
+                MessageBox.Show("Success Edit Data");
+            }
+            catch(Exception d)
+            {
+                MessageBox.Show(d.Message);
+            }
+        }
+
+        void deleteData()
+        {
+            SqlConnection koneksi = new SqlConnection("Data Source=LAPTOP-91VJ4BQG;Initial Catalog=Toko_Obat;User ID=sa;Password=abianfikri");
+
+            try
+            {
+                koneksi.Open();
+                SqlCommand cmd = new SqlCommand("DELETE Data_Pengelolaan_Obat WHERE Kode_Pengelolaan = '" + kode_pengelolaan.Text + "'", koneksi);
+                cmd.ExecuteNonQuery();
+                koneksi.Close();
+                getData();
+                MessageBox.Show("Success Delete Data");
+            }
+            catch(Exception u)
+            {
+                MessageBox.Show(u.Message);
+            }
+        }
 
         private void Data_Pengelolaan_Obat_Load(object sender, EventArgs e)
         {
@@ -81,17 +163,17 @@ namespace Toko_Obat
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
+            insertData();
         }
 
         private void Update_Click(object sender, EventArgs e)
         {
-            
+            updateData();
         }
 
         private void Delete_Click(object sender, EventArgs e)
         {
-            
+            deleteData();
         }
 
         private void Add_Click(object sender, EventArgs e)
@@ -156,6 +238,25 @@ namespace Toko_Obat
         private void Data_Pengelolaan_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+
+            if (dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+            {
+                dataGridView1.CurrentRow.Selected = true;
+                kode_pengelolaan.Text = dataGridView1.Rows[e.RowIndex].Cells[0].FormattedValue.ToString();
+                id_apoteker.Text = dataGridView1.Rows[e.RowIndex].Cells[1].FormattedValue.ToString();
+                kode_obat.Text = dataGridView1.Rows[e.RowIndex].Cells[2].FormattedValue.ToString();
+                nama_obat.Text = dataGridView1.Rows[e.RowIndex].Cells[3].FormattedValue.ToString();
+                jenis_obat.Text = dataGridView1.Rows[e.RowIndex].Cells[4].FormattedValue.ToString();
+                kadaluarsa.Text = dataGridView1.Rows[e.RowIndex].Cells[5].FormattedValue.ToString();
+                harga.Text = dataGridView1.Rows[e.RowIndex].Cells[6].FormattedValue.ToString();
+                efek_samping.Text = dataGridView1.Rows[e.RowIndex].Cells[7].FormattedValue.ToString();
+                cara_penggunaan.Text = dataGridView1.Rows[e.RowIndex].Cells[8].FormattedValue.ToString();
+            }
         }
     }
 }

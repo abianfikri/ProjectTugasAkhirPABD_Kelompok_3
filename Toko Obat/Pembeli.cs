@@ -28,8 +28,8 @@ namespace Toko_Obat
                     "('"+ Id_Pembeli.Text + "', '" + Nama_Pembeli.Text +"')", conn);
                 insert.ExecuteNonQuery();
                 conn.Close();
-                MessageBox.Show("Success Save Data");
                 getData();
+                MessageBox.Show("Success Save Data");
             }
             catch (Exception p)
             {
@@ -85,10 +85,7 @@ namespace Toko_Obat
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Add.Enabled = false;
-            Create.Enabled = true;
-            Update.Enabled = false;
-            Delete.Enabled = false;
+            
 
             Id_Pembeli.Text = "";
             Nama_Pembeli.Text = "";
@@ -99,10 +96,7 @@ namespace Toko_Obat
 
         private void Create_Click(object sender, EventArgs e)
         {
-            Add.Enabled = true;
-            Create.Enabled = false;
-            Update.Enabled = true;
-            Delete.Enabled = true;
+          
 
             insertData();
 
@@ -110,20 +104,14 @@ namespace Toko_Obat
 
         private void Update_Click(object sender, EventArgs e)
         {
-            Add.Enabled = true;
-            Create.Enabled = true;
-            Update.Enabled = false;
-            Delete.Enabled = true;
+           
 
             updateData();
         }
 
         private void Delete_Click(object sender, EventArgs e)
         {
-            Add.Enabled = true;
-            Create.Enabled = true;
-            Update.Enabled = true;
-            Delete.Enabled = false;
+            
 
             deleteData();
         }

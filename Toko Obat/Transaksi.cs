@@ -32,8 +32,8 @@ namespace Toko_Obat
                     "'" + totalHarga.Text + "')", conn);
                 insert.ExecuteNonQuery();
                 conn.Close();
-                MessageBox.Show("Success Save Data");
                 getData();
+                MessageBox.Show("Success Save Data");
             }
             catch (Exception p)
             {
@@ -72,8 +72,8 @@ namespace Toko_Obat
                     "Tgl_Transaksi = '" + tgl_transaksi.Value + "', Qty = '" + qty.Text + "', Harga_Satuan = '" + harga.Text + "', Total_Harga = '" + totalHarga.Text + "' WHERE Kode_Transaksi = '" + kode_transaksi.Text + "'", conn);
                 query.ExecuteNonQuery();
                 conn.Close();
-                MessageBox.Show("Success Edit Data");
                 getData();
+                MessageBox.Show("Success Edit Data");
             }
             catch (Exception ep)
             {
@@ -91,8 +91,8 @@ namespace Toko_Obat
                 SqlCommand query = new SqlCommand("DELETE Transaksi WHERE Kode_Transaksi = '"+kode_transaksi.Text+"'", conn);
                 query.ExecuteNonQuery();
                 conn.Close();
-                MessageBox.Show("Success Delete Data");
                 getData();
+                MessageBox.Show("Success Delete Data");
             }
             catch(Exception ed)
             {

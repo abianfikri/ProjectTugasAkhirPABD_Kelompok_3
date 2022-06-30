@@ -68,10 +68,11 @@ namespace Toko_Obat
             this.logout = new System.Windows.Forms.Button();
             this.Pembeli = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.hitung = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.Report = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.transaksiBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.toko_ObatDataSet)).BeginInit();
@@ -291,7 +292,7 @@ namespace Toko_Obat
             // 
             // Add
             // 
-            this.Add.Location = new System.Drawing.Point(391, 288);
+            this.Add.Location = new System.Drawing.Point(301, 285);
             this.Add.Name = "Add";
             this.Add.Size = new System.Drawing.Size(75, 33);
             this.Add.TabIndex = 17;
@@ -301,7 +302,7 @@ namespace Toko_Obat
             // 
             // Create
             // 
-            this.Create.Location = new System.Drawing.Point(527, 288);
+            this.Create.Location = new System.Drawing.Point(412, 285);
             this.Create.Name = "Create";
             this.Create.Size = new System.Drawing.Size(75, 33);
             this.Create.TabIndex = 18;
@@ -311,7 +312,7 @@ namespace Toko_Obat
             // 
             // Update
             // 
-            this.Update.Location = new System.Drawing.Point(653, 288);
+            this.Update.Location = new System.Drawing.Point(515, 285);
             this.Update.Name = "Update";
             this.Update.Size = new System.Drawing.Size(75, 33);
             this.Update.TabIndex = 19;
@@ -321,7 +322,7 @@ namespace Toko_Obat
             // 
             // Delete
             // 
-            this.Delete.Location = new System.Drawing.Point(778, 288);
+            this.Delete.Location = new System.Drawing.Point(612, 285);
             this.Delete.Name = "Delete";
             this.Delete.Size = new System.Drawing.Size(75, 33);
             this.Delete.TabIndex = 20;
@@ -411,16 +412,6 @@ namespace Toko_Obat
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Toko_Obat.Properties.Resources.Apoteker;
-            this.pictureBox2.Location = new System.Drawing.Point(63, 10);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(113, 106);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 10;
-            this.pictureBox2.TabStop = false;
-            // 
             // hitung
             // 
             this.hitung.Location = new System.Drawing.Point(810, 162);
@@ -433,7 +424,7 @@ namespace Toko_Obat
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(922, 296);
+            this.textBox1.Location = new System.Drawing.Point(775, 296);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(186, 22);
             this.textBox1.TabIndex = 29;
@@ -442,11 +433,31 @@ namespace Toko_Obat
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(919, 276);
+            this.label9.Location = new System.Drawing.Point(772, 276);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(53, 17);
             this.label9.TabIndex = 30;
             this.label9.Text = "Search";
+            // 
+            // Report
+            // 
+            this.Report.Location = new System.Drawing.Point(1048, 276);
+            this.Report.Name = "Report";
+            this.Report.Size = new System.Drawing.Size(121, 48);
+            this.Report.TabIndex = 31;
+            this.Report.Text = "Report";
+            this.Report.UseVisualStyleBackColor = true;
+            this.Report.Click += new System.EventHandler(this.Report_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Toko_Obat.Properties.Resources.Apoteker;
+            this.pictureBox2.Location = new System.Drawing.Point(63, 10);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(113, 106);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 10;
+            this.pictureBox2.TabStop = false;
             // 
             // Transaksi
             // 
@@ -454,6 +465,7 @@ namespace Toko_Obat
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGreen;
             this.ClientSize = new System.Drawing.Size(1300, 548);
+            this.Controls.Add(this.Report);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.hitung);
@@ -538,5 +550,6 @@ namespace Toko_Obat
         private System.Windows.Forms.Button hitung;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button Report;
     }
 }

@@ -305,5 +305,11 @@ namespace Toko_Obat
                 MessageBox.Show(t.Message);
             }
         }
+
+        private void Report_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new PrintData().Show();
+        }
     }
 }

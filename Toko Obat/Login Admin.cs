@@ -46,7 +46,7 @@ namespace Toko_Obat
 
         private void Login_Admin_Load(object sender, EventArgs e)
         {
-            
+            pass_admin.UseSystemPasswordChar = true;
         }
     }
 }

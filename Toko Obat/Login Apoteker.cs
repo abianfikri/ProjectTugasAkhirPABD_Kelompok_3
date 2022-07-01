@@ -50,7 +50,7 @@ namespace Toko_Obat
 
         private void Login_Apoteker_Load(object sender, EventArgs e)
         {
-
+            pass_apoteker.UseSystemPasswordChar = true;
         }
     }
 }

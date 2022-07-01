@@ -62,9 +62,10 @@ namespace Toko_Obat
 
         void deleteData()
         {
+
             SqlConnection conn = new SqlConnection("Data Source=LAPTOP-91VJ4BQG;Initial Catalog=Toko_Obat;User ID=sa;Password=abianfikri");
-            SqlCommand cmd = new SqlCommand("Delete Apoteker where Id_Apoteker=@Id_Apoteker", conn);
-            cmd.Parameters.AddWithValue("@Id_Apoteker", id_apoteker.Text);
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("Delete Apoteker where Id_Apoteker= '"+id_apoteker.Text+"'", conn);
             cmd.ExecuteNonQuery();
             getData();
             conn.Close();
